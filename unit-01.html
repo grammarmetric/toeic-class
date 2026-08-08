@@ -51,12 +51,14 @@ button{font-family:inherit;font-size:inherit}
 .ex-h h3{margin:0;font-size:16.5px;color:#a2172b}
 
 figure{margin:0 0 14px}
-/* cap the scans so the book's type reads at about the same size as the page's
-   own text on a laptop; on a phone they still fill the column */
-figure.scan img{border:1px solid var(--line);border-radius:8px;background:#fff;max-width:680px}
+/* Cap the FIGURE so the book's type reads at about the same size as the page's
+   own text on a laptop; on a phone the scans still fill the column. Capping the
+   img instead would override max-width:100% and overflow a narrow screen. */
+figure.scan{max-width:680px}
+figure.scan img{border:1px solid var(--line);border-radius:8px;background:#fff;max-width:100%}
 figure.plain img{border-radius:6px}
-.scan-narrow img{max-width:560px}
-.photo{max-width:400px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.scan-narrow{max-width:560px}
+.photo{max-width:min(400px,100%);border:1px solid var(--line);border-radius:8px;overflow:hidden}
 @media(min-width:700px){ .photo{max-width:340px} }
 
 /* ---------- tip cards ---------- */

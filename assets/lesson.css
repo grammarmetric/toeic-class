@@ -42,10 +42,13 @@ button{font-family:inherit;font-size:inherit}
 .ex-h h3{margin:0;font-size:16.5px;color:var(--accent)}
 
 figure{margin:0 0 14px}
-figure.scan img{border:1px solid var(--line);border-radius:8px;background:#fff;max-width:680px}
-.scan-narrow img{max-width:560px}
-.scan-wide img{max-width:100%}
-.photo{max-width:400px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+/* Cap the FIGURE, never the img: capping the image would override the global
+   max-width:100% and let wide scans overflow a narrow phone. */
+figure.scan{max-width:680px}
+figure.scan img{border:1px solid var(--line);border-radius:8px;background:#fff;max-width:100%}
+.scan-narrow{max-width:560px}
+.scan-wide{max-width:100%}
+.photo{max-width:min(400px,100%);border:1px solid var(--line);border-radius:8px;overflow:hidden}
 @media(min-width:700px){ .photo{max-width:340px} }
 
 /* ---------- tip cards ---------- */
@@ -65,8 +68,8 @@ figure.scan img{border:1px solid var(--line);border-radius:8px;background:#fff;m
 .pic-row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
 .pic-row .photo{flex:0 0 auto}
 .pic-row .fields{flex:1 1 260px;min-width:240px}
-.q-scan{margin:0 0 11px}
-.q-scan img{border:1px solid var(--line);border-radius:7px;background:#fff;max-width:560px}
+.q-scan{margin:0 0 11px;max-width:560px}
+.q-scan img{border:1px solid var(--line);border-radius:7px;background:#fff;max-width:100%}
 
 /* ---------- chips ---------- */
 .bank{margin:0 0 8px}
