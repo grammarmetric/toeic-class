@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit 1 — Listening Part 1: Photographs | Tactics for TOEIC</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2300060e'/%3E%3Ctext x='16' y='23' font-family='Segoe UI,Arial' font-size='19' font-weight='700' fill='%2354c1e6' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --navy:#00060e; --navy-800:#0a1220; --navy-700:#131e30;
+  --olive:#9a9f17; --yellow:#fee801; --sky:#54c1e6; --teal:#39c4b6;
+  --paper:#f5f7fa; --card:#ffffff; --ink:#16202e; --dim:#5d6a7a;
+  --line:#dde4ec; --danger:#d94f4f; --ok:#2ea895;
+  --okbg:#e8f7f4; --dangerbg:#fceceb;
+  --font:"Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --wrap:880px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.55}
+img{max-width:100%;height:auto;display:block}
+button{font-family:inherit;font-size:inherit}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;
+     padding:10px max(14px,env(safe-area-inset-left)) 10px max(14px,env(safe-area-inset-right));
+     display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.top .home{color:var(--sky);text-decoration:none;font-weight:600;font-size:14px;white-space:nowrap}
+.top h1{margin:0;font-size:15px;font-weight:600;line-height:1.3;flex:1 1 auto;min-width:0}
+.top h1 span{display:block;font-weight:400;color:#9fb0c4;font-size:13px}
+.top .reset{background:transparent;border:1px solid #35455c;color:#9fb0c4;border-radius:7px;
+            padding:5px 11px;font-size:13px;cursor:pointer}
+.top .reset:hover{border-color:var(--sky);color:var(--sky)}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding:20px max(14px,env(safe-area-inset-left)) 80px}
+
+/* ---------- section scaffolding ---------- */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:14px;
+     padding:20px 18px;margin:0 0 20px}
+.sec-h{display:flex;align-items:center;gap:11px;margin:0 0 4px}
+.badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:#a2172b;color:#fff;
+       font-weight:700;display:grid;place-items:center;font-size:16px}
+.badge.num{background:#a2172b;border-radius:50%}
+.sec-h h2{margin:0;font-size:19px;letter-spacing:-.2px}
+.sub{color:var(--dim);font-size:13.5px;margin:0 0 14px 41px}
+.ex{margin:24px 0 0;padding-top:20px;border-top:1px solid var(--line)}
+.ex:first-of-type{border-top:0;padding-top:0;margin-top:14px}
+.ex-h{display:flex;align-items:baseline;gap:9px;margin:0 0 10px}
+.ex-h .n{flex:0 0 auto;color:#a2172b;font-weight:700;font-size:18px}
+.ex-h h3{margin:0;font-size:16.5px;color:#a2172b}
+
+figure{margin:0 0 14px}
+/* cap the scans so the book's type reads at about the same size as the page's
+   own text on a laptop; on a phone they still fill the column */
+figure.scan img{border:1px solid var(--line);border-radius:8px;background:#fff;max-width:680px}
+figure.plain img{border-radius:6px}
+.scan-narrow img{max-width:560px}
+.photo{max-width:400px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+@media(min-width:700px){ .photo{max-width:340px} }
+
+/* ---------- tip cards ---------- */
+.tip{border:1px solid var(--line);border-left:4px solid var(--teal);background:#f7fbfb;
+     border-radius:9px;padding:12px 14px;margin:0 0 16px;width:fit-content;max-width:100%}
+.tip img{max-width:230px}
+.tip.check{border-left-color:#2f3f96;background:#f6f7fd}
+.tip.une{border-left-color:#4a8f3c;background:#f6fbf4}
+
+/* ---------- items ---------- */
+.item{border:1px solid var(--line);border-radius:11px;padding:14px;margin:0 0 14px;background:#fcfdfe}
+.item.marked-ok{border-color:var(--ok);background:var(--okbg)}
+.item.marked-no{border-color:var(--danger);background:var(--dangerbg)}
+.item-h{font-weight:700;color:var(--dim);font-size:13px;letter-spacing:.06em;
+        text-transform:uppercase;margin:0 0 9px}
+.pic-row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.pic-row .photo{flex:0 0 auto}
+.pic-row .fields{flex:1 1 260px;min-width:240px}
+
+/* ---------- word bank chips ---------- */
+.bank{margin:0 0 8px}
+.bank-lab{font-size:12.5px;color:var(--dim);font-weight:600;margin:0 0 5px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{border:1px solid #c6d2e0;background:#fff;color:var(--ink);border-radius:999px;
+      padding:7px 14px;cursor:pointer;font-size:14.5px;line-height:1.2;
+      transition:background .12s,border-color .12s,color .12s;-webkit-tap-highlight-color:transparent}
+.chip:hover{border-color:var(--sky)}
+.chip[aria-pressed="true"]{background:var(--navy-700);border-color:var(--navy-700);color:#fff}
+.chip.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.chip.no{background:var(--danger);border-color:var(--danger);color:#fff;text-decoration:line-through}
+.chip.miss{background:#fff;border-color:var(--ok);color:var(--ok);border-style:dashed;font-weight:600}
+
+/* ---------- inputs ---------- */
+.f{margin:0 0 10px}
+.f label{display:block;font-size:12.5px;color:var(--dim);font-weight:600;margin:0 0 4px}
+input[type=text],textarea{width:100%;border:1px solid #c6d2e0;border-radius:8px;
+      padding:9px 11px;font-family:inherit;font-size:15.5px;color:var(--ink);background:#fff}
+input[type=text]:focus,textarea:focus{outline:2px solid var(--sky);outline-offset:-1px;border-color:var(--sky)}
+textarea{resize:vertical;min-height:64px;line-height:1.5}
+input.ok{border-color:var(--ok);background:var(--okbg)}
+input.no{border-color:var(--danger);background:var(--dangerbg)}
+
+/* ---------- MCQ ---------- */
+.opts{display:flex;gap:8px;flex-wrap:wrap;margin:2px 0 0}
+.opt{width:52px;height:46px;border:1px solid #c6d2e0;background:#fff;border-radius:9px;
+     font-weight:700;font-size:16px;color:var(--ink);cursor:pointer;
+     -webkit-tap-highlight-color:transparent;transition:background .12s,border-color .12s}
+.opt:hover{border-color:var(--sky)}
+.opt[aria-pressed="true"]{background:var(--navy-700);border-color:var(--navy-700);color:#fff}
+.opt.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.opt.no{background:var(--danger);border-color:var(--danger);color:#fff}
+.opt.key{border-color:var(--ok);border-width:2px;color:var(--ok)}
+
+/* ---------- buttons ---------- */
+.btn{border:1px solid var(--navy-700);background:var(--navy-700);color:#fff;border-radius:9px;
+     padding:10px 18px;cursor:pointer;font-weight:600;font-size:14.5px}
+.btn:hover{background:var(--navy-800)}
+.btn.ghost{background:transparent;color:var(--navy-700)}
+.btn.ghost:hover{background:#eef2f7}
+.btn.sm{padding:7px 13px;font-size:13.5px}
+.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:14px 0 0}
+.score{font-weight:700;font-size:14.5px}
+.score.good{color:var(--ok)} .score.bad{color:var(--danger)}
+
+/* ---------- audio ---------- */
+.audio{display:flex;align-items:center;gap:12px;background:var(--navy-800);color:#fff;
+       border-radius:11px;padding:11px 14px;margin:0 0 14px;flex-wrap:wrap}
+.audio .play{flex:0 0 auto;width:44px;height:44px;border-radius:50%;border:0;background:var(--sky);
+             color:var(--navy);cursor:pointer;font-size:17px;display:grid;place-items:center}
+.audio .play:disabled{opacity:.55;cursor:default}
+.audio .meta{flex:1 1 150px;min-width:0}
+.audio .t{font-size:14px;font-weight:600;line-height:1.25}
+.audio .s{font-size:12px;color:#9fb0c4;font-variant-numeric:tabular-nums}
+.audio .bar{flex:1 1 100%;height:6px;border-radius:4px;background:#243349;
+            cursor:pointer;position:relative;overflow:hidden}
+.audio .bar i{position:absolute;inset:0 100% 0 0;background:var(--sky);border-radius:4px}
+.audio .again{background:transparent;border:1px solid #35455c;color:#9fb0c4;border-radius:7px;
+              padding:6px 11px;font-size:12.5px;cursor:pointer}
+.audio .again:hover{border-color:var(--sky);color:var(--sky)}
+
+/* ---------- reveal ---------- */
+.reveal{border:1px dashed var(--line);border-radius:10px;background:#fbfcfe;padding:0;margin:12px 0 0;overflow:hidden}
+.reveal>summary{cursor:pointer;padding:11px 14px;font-weight:600;font-size:14px;color:var(--navy-700);
+                list-style:none;display:flex;align-items:center;gap:8px}
+.reveal>summary::-webkit-details-marker{display:none}
+.reveal>summary::before{content:"▸";color:var(--sky);font-size:13px}
+.reveal[open]>summary::before{content:"▾"}
+.reveal>summary:hover{background:#f2f6fb}
+.reveal .body{padding:0 14px 13px;font-size:14.5px}
+.reveal .body p{margin:.45em 0}
+.reveal .body .lab{font-weight:700;color:var(--dim);font-size:12.5px;text-transform:uppercase;
+                   letter-spacing:.05em;margin:12px 0 3px}
+.reveal .body .lab:first-child{margin-top:2px}
+.reveal .body ul{margin:.3em 0;padding-left:1.2em}
+.reveal .body li{margin:.2em 0}
+.script{font-style:italic;color:var(--navy-700)}
+
+/* ---------- feedback ---------- */
+.fb{margin:9px 0 0;font-size:14px;padding:9px 11px;border-radius:8px;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--okbg);color:#1b6f62}
+.fb.no{background:var(--dangerbg);color:#9c3330}
+.fb ul{margin:.35em 0 0;padding-left:1.15em}
+.fb li{margin:.15em 0}
+.fb .c{font-weight:700}
+
+.note{font-size:13.5px;color:var(--dim);margin:10px 0 0}
+.foot{max-width:var(--wrap);margin:0 auto;padding:0 16px 40px;color:var(--dim);font-size:12.5px}
+.foot a{color:var(--navy-700)}
+@media print{ .top,.row,.audio{display:none} }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="home" href="index.html">← Lessons</a>
+  <h1>Unit 1 · Listening Test Part 1: Photographs<span>Tactics for TOEIC · pages 9–12</span></h1>
+  <button class="reset" id="resetBtn" type="button">Clear my answers</button>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= A · FOCUS ================= -->
+  <section class="sec">
+    <div class="sec-h"><div class="badge">A</div><h2>Focus</h2></div>
+    <figure class="scan"><img src="img/u01/focus.jpg" alt="Focus: Using the photo to predict what you will hear. As soon as this section starts, pick out the main theme of the first photograph and start to predict the type of statements you may hear."></figure>
+
+    <!-- ---- 1 Language building ---- -->
+    <div class="ex">
+      <figure class="scan"><img src="img/u01/ex1-instr.jpg" alt="1 Language building: Brainstorm vocabulary for the focus. Match the nouns and verbs with pictures 1–3. You can use them more than once."></figure>
+
+      <div class="tip"><img src="img/u01/tip1.jpg" alt="Test tip: Focus on nouns and verbs. Most distractors in the TOEIC test Part 1 involve the wrong noun or verb. Brainstorm nouns and verbs related to the picture before you listen. Focus on them while listening."></div>
+
+      <figure class="scan scan-narrow"><img src="img/u01/ex1-table.jpg" alt="Word bank. Nouns: people, briefcase, meal, screen, family, keyboard. Verbs: eat, sit, type, hold, look, discuss."></figure>
+
+      <p class="note">Tap the words that match each picture. Words can be used more than once.</p>
+
+      <div class="item" id="lb1">
+        <div class="item-h">Picture 1</div>
+        <div class="pic-row">
+          <div class="photo"><img src="img/u01/ex1-p1.jpg" alt="A man typing at a computer while a woman looks at the screen in an internet café."></div>
+          <div class="fields">
+            <div class="bank"><div class="bank-lab">Nouns</div><div class="chips" data-bank="nouns" data-item="lb1"></div></div>
+            <div class="bank"><div class="bank-lab">Verbs</div><div class="chips" data-bank="verbs" data-item="lb1"></div></div>
+          </div>
+        </div>
+        <div class="fb" id="fb-lb1"></div>
+      </div>
+
+      <div class="item" id="lb2">
+        <div class="item-h">Picture 2</div>
+        <div class="pic-row">
+          <div class="photo"><img src="img/u01/ex1-p2.jpg" alt="Two men and a woman standing outside, looking at a document."></div>
+          <div class="fields">
+            <div class="bank"><div class="bank-lab">Nouns</div><div class="chips" data-bank="nouns" data-item="lb2"></div></div>
+            <div class="bank"><div class="bank-lab">Verbs</div><div class="chips" data-bank="verbs" data-item="lb2"></div></div>
+          </div>
+        </div>
+        <div class="fb" id="fb-lb2"></div>
+      </div>
+
+      <div class="item" id="lb3">
+        <div class="item-h">Picture 3</div>
+        <div class="pic-row">
+          <div class="photo"><img src="img/u01/ex1-p3.jpg" alt="A family sitting around a table eating a meal."></div>
+          <div class="fields">
+            <div class="bank"><div class="bank-lab">Nouns</div><div class="chips" data-bank="nouns" data-item="lb3"></div></div>
+            <div class="bank"><div class="bank-lab">Verbs</div><div class="chips" data-bank="verbs" data-item="lb3"></div></div>
+          </div>
+        </div>
+        <div class="fb" id="fb-lb3"></div>
+      </div>
+
+      <div class="row">
+        <button class="btn" type="button" data-check="lb">Check pictures 1–3</button>
+        <button class="btn ghost sm" type="button" data-clearmark="lb">Try again</button>
+        <span class="score" id="score-lb"></span>
+      </div>
+
+      <figure class="scan" style="margin-top:16px"><img src="img/u01/ex1-follow.jpg" alt="Follow up: Add at least two more nouns and verbs to each picture, then compare your lists with a partner."></figure>
+      <div class="f"><label for="lb-extra">Your extra nouns and verbs (pictures 1, 2, 3)</label>
+        <textarea id="lb-extra" data-save placeholder="Picture 1: …&#10;Picture 2: …&#10;Picture 3: …"></textarea></div>
+      <details class="reveal"><summary>Possible answers</summary><div class="body">
+        <p><span class="c">Picture 1</span> — glasses, computer / work, talk</p>
+        <p><span class="c">Picture 2</span> — street, diary / point, write</p>
+        <p><span class="c">Picture 3</span> — fork, food, window / chat, smile</p>
+      </div></details>
+    </div>
+
+    <!-- ---- 2 Test tactic ---- -->
+    <div class="ex">
+      <figure class="scan"><img src="img/u01/ex2-instr.jpg" alt="2 Test tactic: Predict possible statements before you listen. Read the information in the box below. Then using the words from Activity 1, write two sentences about each of the pictures 1–3. Read your sentences to your partner."></figure>
+      <div class="tip"><img src="img/u01/tip2.jpg" alt="Test tip: Scan the instructions quickly to make sure you understand what is required."></div>
+      <figure class="scan"><img src="img/u01/ex2-box.jpg" alt="Many statements in Part 1 will take one of the following forms. 1. The (man/woman/people/thing) is / are doing (something). e.g. The man is working on the computer. 2. The (man/woman/people/thing) has / is / are (something/somewhere). e.g. The man has a briefcase. The family are at the table."></figure>
+
+      <div class="item">
+        <div class="item-h">Picture 1</div>
+        <div class="pic-row">
+          <div class="photo"><img src="img/u01/ex1-p1.jpg" alt="Picture 1 again: a man typing at a computer."></div>
+          <div class="fields">
+            <div class="f"><label for="tt1a">Sentence 1</label><input type="text" id="tt1a" data-save></div>
+            <div class="f"><label for="tt1b">Sentence 2</label><input type="text" id="tt1b" data-save></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-h">Picture 2</div>
+        <div class="pic-row">
+          <div class="photo"><img src="img/u01/ex1-p2.jpg" alt="Picture 2 again: three people looking at a document."></div>
+          <div class="fields">
+            <div class="f"><label for="tt2a">Sentence 1</label><input type="text" id="tt2a" data-save></div>
+            <div class="f"><label for="tt2b">Sentence 2</label><input type="text" id="tt2b" data-save></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-h">Picture 3</div>
+        <div class="pic-row">
+          <div class="photo"><img src="img/u01/ex1-p3.jpg" alt="Picture 3 again: a family eating a meal."></div>
+          <div class="fields">
+            <div class="f"><label for="tt3a">Sentence 1</label><input type="text" id="tt3a" data-save></div>
+            <div class="f"><label for="tt3b">Sentence 2</label><input type="text" id="tt3b" data-save></div>
+          </div>
+        </div>
+      </div>
+
+      <details class="reveal"><summary>Possible answers</summary><div class="body">
+        <p><span class="c">Picture 1</span> — The woman is telling the man what to type. / They are in an Internet café.</p>
+        <p><span class="c">Picture 2</span> — The woman is writing in her diary. / The men and the woman are in the street.</p>
+        <p><span class="c">Picture 3</span> — The family are sitting at the table. / There is a lot of food on the table.</p>
+      </div></details>
+
+      <figure class="scan" style="margin-top:16px"><img src="img/u01/ex2-follow.jpg" alt="Follow up: Listen to the correct answer choice for each picture. After each listening discuss with your partner how close your predictions were."></figure>
+      <div class="audio" data-src="audio/u01/t2-tactic-followup.mp3" data-title="Test tactic — follow up (page 10)"></div>
+      <details class="reveal"><summary>Tapescript</summary><div class="body script">
+        <p><span class="c">Picture 1</span> The man is focusing on the screen.</p>
+        <p><span class="c">Picture 2</span> The people are discussing something.</p>
+        <p><span class="c">Picture 3</span> The family's eating a meal.</p>
+      </div></details>
+    </div>
+
+    <!-- ---- 3 Tactic practice ---- -->
+    <div class="ex">
+      <figure class="scan"><img src="img/u01/ex3-instr.jpg" alt="3 Tactic practice. For each picture 1–4, you will have two minutes to brainstorm vocabulary and predict possible statements about them with your partner. Then you will hear the correct statement for each picture. After each one, pause the audio and discuss with your partner how close your predictions were."></figure>
+      <div class="tip"><img src="img/u01/tip3.jpg" alt="Test tip: Predict the statement type. Most statements are about: a) The activity, e.g. The man is writing an email. b) The general situation, e.g. The meal is ready. c) Spatial relationships (e.g. next to, near, across from, etc.)"></div>
+
+      <div class="item">
+        <div class="item-h">Picture 1</div>
+        <div class="pic-row">
+          <div class="photo"><img src="img/u01/ex3-p1.jpg" alt="Three people in an office at a desk, having a meeting."></div>
+          <div class="fields">
+            <div class="f"><label for="tp1v">Vocabulary</label><input type="text" id="tp1v" data-save></div>
+            <div class="f"><label for="tp1s">Your predicted statements</label><textarea id="tp1s" data-save></textarea></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-h">Picture 2</div>
+        <div class="pic-row">
+          <div class="photo"><img src="img/u01/ex3-p2.jpg" alt="A barber in a white jacket cutting a young boy's hair."></div>
+          <div class="fields">
+            <div class="f"><label for="tp2v">Vocabulary</label><input type="text" id="tp2v" data-save></div>
+            <div class="f"><label for="tp2s">Your predicted statements</label><textarea id="tp2s" data-save></textarea></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-h">Picture 3</div>
+        <div class="pic-row">
+          <div class="photo"><img src="img/u01/ex3-p3.jpg" alt="People standing in a queue with luggage at an airport check-in."></div>
+          <div class="fields">
+            <div class="f"><label for="tp3v">Vocabulary</label><input type="text" id="tp3v" data-save></div>
+            <div class="f"><label for="tp3s">Your predicted statements</label><textarea id="tp3s" data-save></textarea></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-h">Picture 4</div>
+        <div class="pic-row">
+          <div class="photo"><img src="img/u01/ex3-p4.jpg" alt="A man standing outdoors reading a newspaper."></div>
+          <div class="fields">
+            <div class="f"><label for="tp4v">Vocabulary</label><input type="text" id="tp4v" data-save></div>
+            <div class="f"><label for="tp4s">Your predicted statements</label><textarea id="tp4s" data-save></textarea></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="audio" data-src="audio/u01/t3-tactic-practice.mp3" data-title="Tactic practice — pictures 1–4 (page 10)"></div>
+      <details class="reveal"><summary>Possible answers &amp; tapescript</summary><div class="body">
+        <div class="lab">Picture 1</div>
+        <p>chair, desk, discuss, meeting, office, papers, sit<br>The people are working in the office. / The people are discussing a project.</p>
+        <p class="script">Tapescript: They are having a meeting.</p>
+        <div class="lab">Picture 2</div>
+        <p>hair, barber, sit, white jacket, cut, shave, short blonde hair<br>The barber is wearing a white jacket. / The boy has short blonde hair.</p>
+        <p class="script">Tapescript: The boy is getting his hair cut.</p>
+        <div class="lab">Picture 3</div>
+        <p>luggage, check-in, line, ground staff, wait<br>The passengers are waiting to check in. / There is a long line at the check-in counter.</p>
+        <p class="script">Tapescript: The people are waiting in line.</p>
+        <div class="lab">Picture 4</div>
+        <p>bench, man, newspaper, park, sit, sunny, read<br>The man is sitting on a bench in the park. / The man is reading in the park.</p>
+        <p class="script">Tapescript: The man is reading a newspaper.</p>
+      </div></details>
+    </div>
+
+    <!-- ---- Understanding natural English ---- -->
+    <div class="ex">
+      <div class="ex-h"><h3>Understanding natural English</h3></div>
+      <div class="tip une"><img src="img/u01/une-box.jpg" alt="Understanding natural English. In natural spoken English, sounds are sometimes changed, combined and dropped. Listen to these sentences spoken naturally and write in the missing words."></div>
+      <div class="audio" data-src="audio/u01/t4-natural-english.mp3" data-title="Understanding natural English (page 10)"></div>
+
+      <div class="item" id="une">
+        <div class="f"><label for="une1">1. The <strong>………</strong> discussing something.</label>
+          <input type="text" id="une1" data-save data-gap placeholder="the missing words"></div>
+        <div class="f"><label for="une2">2. The <strong>………</strong> at the table.</label>
+          <input type="text" id="une2" data-save data-gap placeholder="the missing words"></div>
+        <div class="fb" id="fb-une"></div>
+      </div>
+      <div class="row">
+        <button class="btn" type="button" data-check="une">Check</button>
+        <button class="btn ghost sm" type="button" data-clearmark="une">Try again</button>
+        <span class="score" id="score-une"></span>
+      </div>
+      <details class="reveal"><summary>Tapescript</summary><div class="body script">
+        <p>The <span class="c">people are</span> discussing something.</p>
+        <p>The <span class="c">family's</span> at the table.</p>
+      </div></details>
+    </div>
+  </section>
+
+  <!-- ================= B · MINI-TEST ================= -->
+  <section class="sec">
+    <div class="sec-h"><div class="badge">B</div><h2>Mini-test</h2></div>
+    <figure class="scan"><img src="img/u01/mt-instr.jpg" alt="Mini-test. Now practice what you have learnt at the actual test speed with questions 1–8."></figure>
+    <figure class="scan"><img src="img/u01/mt-clock.jpg" alt="Use any time available to skim the first pictures before the listening starts. After that you will have exactly 5 seconds between each question to mark your answer and focus on the next picture."></figure>
+    <div class="audio" data-src="audio/u01/t5-mini-test.mp3" data-title="Mini-test — questions 1–8 (page 11)"></div>
+    <p class="note">The recording runs straight through all eight questions, just like the real test. Choose an answer for each photo as you listen, then check.</p>
+
+    <div id="mt"></div>
+
+    <div class="row">
+      <button class="btn" type="button" data-check="mt">Check my answers</button>
+      <button class="btn ghost sm" type="button" data-clearmark="mt">Try again</button>
+      <span class="score" id="score-mt"></span>
+    </div>
+  </section>
+
+  <!-- ================= C · LEARN BY DOING ================= -->
+  <section class="sec">
+    <div class="sec-h"><div class="badge">C</div><h2>Learn by doing: Writing stories</h2></div>
+    <figure class="scan"><img src="img/u01/lbd-instr.jpg" alt="A. Choose one of the pictures below, brainstorm vocabulary and write a three-sentence story about it. Look at the examples in the box first. Which picture do they describe?"></figure>
+    <figure class="scan"><img src="img/u01/lbd-box.jpg" alt="Vocabulary (nouns and verbs): table, computer, document, presentation, point, discuss, sit, look at. Sentences: They are sitting at the table. They are looking at the woman. The woman is pointing at the whiteboard."></figure>
+
+    <div class="tip check"><img src="img/u01/checklist.jpg" alt="Tactics checklist: Brainstorm possible nouns and verbs. Predict possible statements."></div>
+
+    <p class="note">Which picture do the example sentences describe?</p>
+    <div class="item" id="lbdq">
+      <div class="opts" data-mcq="lbdq" data-letters="1,2,3,4"></div>
+      <div class="fb" id="fb-lbdq"></div>
+    </div>
+    <div class="row">
+      <button class="btn" type="button" data-check="lbdq">Check</button>
+      <button class="btn ghost sm" type="button" data-clearmark="lbdq">Try again</button>
+    </div>
+
+    <div class="pic-row" style="margin-top:18px">
+      <div class="photo"><img src="img/u01/lbd-p1.jpg" alt="Picture 1: two men sitting at a table with documents, one talking to the other."></div>
+      <div class="photo"><img src="img/u01/lbd-p2.jpg" alt="Picture 2: two women looking at a computer monitor, one pointing at the screen."></div>
+      <div class="photo"><img src="img/u01/lbd-p3.jpg" alt="Picture 3: a woman pointing at a whiteboard while people sit at a table."></div>
+      <div class="photo"><img src="img/u01/lbd-p4.jpg" alt="Picture 4: two men leaning over looking at something with a third person."></div>
+    </div>
+
+    <div class="f" style="margin-top:14px"><label for="lbd-story">Your three-sentence story (say which picture you chose)</label>
+      <textarea id="lbd-story" data-save placeholder="Picture __&#10;1. …&#10;2. …&#10;3. …"></textarea></div>
+
+    <details class="reveal"><summary>Possible answers</summary><div class="body">
+      <p><span class="c">Picture 1</span> Two men are sitting at a table with documents in front of them. / One man is telling the other man something. / The man taking notes has to prepare a presentation.</p>
+      <p><span class="c">Picture 2</span> They are looking at the computer. / One woman is pointing at the screen. / She is saying something important.</p>
+      <p><span class="c">Picture 3</span> The examples given in the box on the page describe this picture.</p>
+      <p><span class="c">Picture 4</span> Two men are looking at something. / One man is sitting down. / They are thinking about a problem.</p>
+    </div></details>
+
+    <figure class="scan" style="margin-top:16px"><img src="img/u01/lbd-b.jpg" alt="B. Read one of your sentences to your partner. Your partner must guess which picture you chose."></figure>
+    <figure class="scan"><img src="img/u01/lbd-follow.jpg" alt="Follow up: Re-write the three sentences you wrote in A above. Change one word (noun or verb) in two of the sentences so that they are wrong. Read the three sentences to a different partner and ask them to choose the correct sentence."></figure>
+    <div class="f"><label for="lbd-rewrite">Your re-written sentences (two of them wrong)</label>
+      <textarea id="lbd-rewrite" data-save></textarea></div>
+  </section>
+
+  <!-- ================= D · FURTHER STUDY ================= -->
+  <section class="sec">
+    <div class="sec-h"><div class="badge">D</div><h2>Further study</h2></div>
+    <figure class="scan"><img src="img/u01/fs-text.jpg" alt="Further study. Find an interesting picture and write three sentences about it. Change one word (noun or verb) in two of the sentences to test on your classmates in the next lesson. Go to word list and quiz page 170."></figure>
+    <div class="f"><label for="fs">Your three sentences for next lesson</label>
+      <textarea id="fs" data-save></textarea></div>
+  </section>
+
+</main>
+
+<p class="foot">Your answers are saved in this browser only — nothing is sent anywhere. Using a different device or clearing your browser data will start you fresh.<br>
+Material from <em>Tactics for TOEIC Listening and Reading Test</em> (Oxford University Press), used for classroom study.</p>
+
+<script>
+"use strict";
+/* ------------------------------------------------------------------ data */
+var NOUNS = ["people","briefcase","meal","screen","family","keyboard"];
+var VERBS = ["eat","sit","type","hold","look","discuss"];
+
+var LB_KEY = {
+  lb1:{nouns:["screen","keyboard"],       verbs:["sit","look","type"]},
+  lb2:{nouns:["people","briefcase"],      verbs:["hold","look","discuss"]},
+  lb3:{nouns:["meal","family"],           verbs:["eat","sit"]}
+};
+
+/* Mini-test: photo, correct letter, the four spoken options, and why each is right/wrong. */
+var MT = [
+  {img:"mt-q1", alt:"Two people carrying a Christmas tree through the snow with a dog.",
+   key:"C",
+   script:{A:"The dog is running in front of the people.", B:"The people are picking up wood.",
+           C:"The people are carrying a tree.",            D:"The people are going outside."},
+   why:{A:"The dog is not <em>running</em>.", B:"They are not <em>picking up</em> anything from the ground.",
+        C:"Correct. <em>They are carrying a tree.</em>", D:"They are not <em>going outside</em>, they are already outside."}},
+  {img:"mt-q2", alt:"A man on a boat pouring a drink from a flask.",
+   key:"D",
+   script:{A:"The man is making a copy.", B:"The man is folding a sail.",
+           C:"The man is drinking from a cup.", D:"The man is pouring a drink."},
+   why:{A:"The man is not <em>making</em> a copy.", B:"The man is not <em>folding a sail</em>.",
+        C:"The man is not drinking from a cup.", D:"Correct. <em>The man is pouring a drink.</em>"}},
+  {img:"mt-q3", alt:"A woman looking at sunflowers at a market stall.",
+   key:"A",
+   script:{A:"She's looking at a flower.", B:"She's buying some vegetables.",
+           C:"She's sitting on the floor.", D:"She's picking up a flower pot."},
+   why:{A:"Correct. <em>She is looking at a flower.</em>", B:"She is not <em>buying some vegetables</em>.",
+        C:"She is not <em>sitting on the floor</em>. She is standing.", D:"She is not picking up a flower pot."}},
+  {img:"mt-q4", alt:"A man kneeling outdoors repairing a lawnmower.",
+   key:"B",
+   script:{A:"He's standing near the bushes.", B:"He's repairing a machine.",
+           C:"He's cutting down a branch.", D:"He's fixing his car."},
+   why:{A:"There are <em>bushes</em>, but he isn't <em>standing</em>.", B:"Correct. <em>He is repairing a lawnmower.</em>",
+        C:"He is not <em>cutting down a branch</em>.", D:"He is not <em>fixing his car</em>, he's fixing a lawnmower."}},
+  {img:"mt-q5", alt:"A man looking out through a large window.",
+   key:"B",
+   script:{A:"The man is washing the glass.", B:"The man is gazing out the window.",
+           C:"The man is holding onto the railing.", D:"The man is hanging a picture."},
+   why:{A:"The man is looking out of a large glass window. He is not <em>washing the glass</em>.",
+        B:"Correct. <em>The man is gazing out the window.</em>",
+        C:"There is not <em>a railing</em>.", D:"He is not <em>hanging a picture</em>."}},
+  {img:"mt-q6", alt:"People sitting at tables in a restaurant.",
+   key:"D",
+   script:{A:"Four people are waiting for the phone booth.", B:"The meal is on the table.",
+           C:"They're putting on aprons.", D:"They're sitting in a restaurant."},
+   why:{A:"They are in a restaurant, not <em>waiting for the phone booth</em>.",
+        B:"There is not any food <em>on the table</em>.", C:"They are not <em>putting on aprons</em>.",
+        D:"Correct. <em>They're sitting in a restaurant.</em>"}},
+  {img:"mt-q7", alt:"A man working at a bench in a workshop full of tools.",
+   key:"A",
+   script:{A:"There are a lot of tools in the workshop.", B:"The man is sitting in the shop.",
+           C:"The shelves in the room are empty.", D:"The man is opening the door."},
+   why:{A:"Correct. <em>There are a lot of tools in the workshop.</em>", B:"The man is not <em>sitting in the shop</em>.",
+        C:"There are a lot of things on the shelves.", D:"The man is not <em>opening the door</em>."}},
+  {img:"mt-q8", alt:"A man in a suit standing at the roadside with his arm raised.",
+   key:"B",
+   script:{A:"The man is waving his briefcase.", B:"The man is trying to get a taxi.",
+           C:"The man is walking on the road.", D:"The man is signing his name."},
+   why:{A:"The man is not <em>waving</em> his briefcase.", B:"Correct. <em>The man is trying to get a taxi.</em>",
+        C:"He is not <em>walking</em>, he is standing.", D:"Confuses <em>signing</em> and <em>signalling</em>."}}
+];
+
+var UNE_KEY = [
+  {id:"une1", accept:["people are","peopleare","people're"], show:"people are"},
+  {id:"une2", accept:["family's","familys","family is","family'sn"], show:"family's"}
+];
+
+var LBD_KEY = "3";
+
+/* ------------------------------------------------------------- persistence */
+var STORE = "gm_toeic_class_u01_v1";
+var state = {};
+try { state = JSON.parse(localStorage.getItem(STORE) || "{}") || {}; } catch (e) { state = {}; }
+var saveTimer = null;
+function save(){
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(function(){
+    try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) {}
+  }, 200);
+}
+function setVal(k, v){ state[k] = v; save(); }
+
+/* ------------------------------------------------------------------ build */
+function el(tag, cls, html){
+  var n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (html != null) n.innerHTML = html;
+  return n;
+}
+
+/* word-bank chips */
+document.querySelectorAll("[data-bank]").forEach(function(box){
+  var words = box.dataset.bank === "nouns" ? NOUNS : VERBS;
+  var item = box.dataset.item, kind = box.dataset.bank;
+  words.forEach(function(w){
+    var b = el("button", "chip", w);
+    b.type = "button";
+    b.dataset.w = w;
+    var k = item + ":" + kind;
+    var on = (state[k] || []).indexOf(w) >= 0;
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+    b.addEventListener("click", function(){
+      var cur = state[k] ? state[k].slice() : [];
+      var i = cur.indexOf(w);
+      if (i >= 0) { cur.splice(i, 1); b.setAttribute("aria-pressed", "false"); }
+      else { cur.push(w); b.setAttribute("aria-pressed", "true"); }
+      b.classList.remove("ok", "no", "miss");
+      setVal(k, cur);
+    });
+    box.appendChild(b);
+  });
+});
+
+/* mini-test items */
+var mtWrap = document.getElementById("mt");
+MT.forEach(function(q, i){
+  var n = i + 1;
+  var item = el("div", "item");
+  item.id = "mtq" + n;
+  item.appendChild(el("div", "item-h", "Question " + n));
+  var row = el("div", "pic-row");
+  var ph = el("div", "photo");
+  var im = new Image();
+  im.src = "img/u01/" + q.img + ".jpg";
+  im.alt = "Question " + n + ": " + q.alt;
+  im.loading = "lazy";
+  ph.appendChild(im);
+  row.appendChild(ph);
+  var fields = el("div", "fields");
+  var opts = el("div", "opts");
+  opts.dataset.mcq = "mtq" + n;
+  opts.dataset.letters = "A,B,C,D";
+  fields.appendChild(opts);
+  row.appendChild(fields);
+  item.appendChild(row);
+  item.appendChild(el("div", "fb")).id = "fb-mtq" + n;
+  mtWrap.appendChild(item);
+});
+
+/* MCQ buttons (mini-test + learn-by-doing) */
+document.querySelectorAll("[data-mcq]").forEach(function(box){
+  var key = box.dataset.mcq;
+  box.dataset.letters.split(",").forEach(function(L){
+    var b = el("button", "opt", L);
+    b.type = "button";
+    b.dataset.v = L;
+    if (state[key] === L) b.setAttribute("aria-pressed", "true");
+    b.addEventListener("click", function(){
+      box.querySelectorAll(".opt").forEach(function(o){
+        o.setAttribute("aria-pressed", "false");
+        o.classList.remove("ok", "no", "key");
+      });
+      b.setAttribute("aria-pressed", "true");
+      setVal(key, L);
+      var it = box.closest(".item");
+      if (it) { it.classList.remove("marked-ok", "marked-no"); }
+      var fb = document.getElementById("fb-" + key);
+      if (fb) fb.classList.remove("show");
+    });
+    box.appendChild(b);
+  });
+});
+
+/* text fields */
+document.querySelectorAll("[data-save]").forEach(function(f){
+  if (state[f.id] != null) f.value = state[f.id];
+  f.addEventListener("input", function(){
+    setVal(f.id, f.value);
+    f.classList.remove("ok", "no");
+  });
+});
+
+/* ------------------------------------------------------------------ audio */
+var blobCache = {};
+document.querySelectorAll(".audio").forEach(function(box){
+  var src = box.dataset.src;
+  var audio = new Audio();
+  audio.preload = "none";
+
+  var play = el("button", "play", "▶");
+  play.type = "button";
+  play.setAttribute("aria-label", "Play " + box.dataset.title);
+  var meta = el("div", "meta");
+  meta.appendChild(el("div", "t", box.dataset.title));
+  var stat = el("div", "s", "Tap play to load");
+  meta.appendChild(stat);
+  var again = el("button", "again", "↺ Restart");
+  again.type = "button";
+  var bar = el("div", "bar");
+  var fill = el("i");
+  bar.appendChild(fill);
+
+  box.appendChild(play); box.appendChild(meta); box.appendChild(again); box.appendChild(bar);
+
+  function fmt(s){
+    if (!isFinite(s)) return "–:––";
+    var m = Math.floor(s / 60), r = Math.floor(s % 60);
+    return m + ":" + (r < 10 ? "0" : "") + r;
+  }
+  function paint(){
+    var d = audio.duration;
+    fill.style.right = (isFinite(d) && d > 0) ? (100 - (audio.currentTime / d) * 100) + "%" : "100%";
+    stat.textContent = fmt(audio.currentTime) + " / " + fmt(d);
+  }
+
+  var loading = false;
+  /* Fetch the whole file to a Blob before playing: a mid-track stall on
+     classroom wifi must never interrupt a listening. */
+  function ensure(){
+    if (audio.src) return Promise.resolve();
+    if (blobCache[src]) { audio.src = blobCache[src]; return Promise.resolve(); }
+    loading = true;
+    play.disabled = true;
+    stat.textContent = "Loading…";
+    return fetch(src).then(function(r){
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.blob();
+    }).then(function(b){
+      blobCache[src] = URL.createObjectURL(b);
+      audio.src = blobCache[src];
+      loading = false;
+      play.disabled = false;
+      stat.textContent = "Ready";
+    }).catch(function(err){
+      loading = false;
+      play.disabled = false;
+      stat.textContent = "Could not load audio — tap to retry";
+      throw err;
+    });
+  }
+
+  play.addEventListener("click", function(){
+    if (loading) return;
+    if (!audio.paused) { audio.pause(); return; }
+    ensure().then(function(){ return audio.play(); }).catch(function(){});
+  });
+  again.addEventListener("click", function(){
+    if (loading) return;
+    ensure().then(function(){ audio.currentTime = 0; return audio.play(); }).catch(function(){});
+  });
+  bar.addEventListener("click", function(e){
+    if (!isFinite(audio.duration)) return;
+    var r = bar.getBoundingClientRect();
+    audio.currentTime = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)) * audio.duration;
+    paint();
+  });
+  audio.addEventListener("play",  function(){ play.textContent = "❚❚"; });
+  audio.addEventListener("pause", function(){ play.textContent = "▶"; });
+  audio.addEventListener("ended", function(){ play.textContent = "▶"; paint(); });
+  audio.addEventListener("timeupdate", paint);
+  audio.addEventListener("loadedmetadata", paint);
+});
+
+/* ---------------------------------------------------------------- marking */
+function norm(s){
+  return (s || "").toLowerCase()
+    .replace(/[‘’]/g, "'")
+    .replace(/[.,!?;:]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+function setScore(id, got, total){
+  var s = document.getElementById("score-" + id);
+  if (!s) return;
+  s.textContent = got + " / " + total + " correct";
+  s.className = "score " + (got === total ? "good" : "bad");
+}
+function fbShow(id, ok, html){
+  var fb = document.getElementById("fb-" + id);
+  if (!fb) return;
+  fb.className = "fb show " + (ok ? "ok" : "no");
+  fb.innerHTML = html;
+}
+
+function checkLB(){
+  var got = 0;
+  Object.keys(LB_KEY).forEach(function(item){
+    var right = true, msg = [];
+    ["nouns", "verbs"].forEach(function(kind){
+      var want = LB_KEY[item][kind];
+      var have = state[item + ":" + kind] || [];
+      var box = document.querySelector('[data-bank="' + kind + '"][data-item="' + item + '"]');
+      box.querySelectorAll(".chip").forEach(function(c){
+        c.classList.remove("ok", "no", "miss");
+        var w = c.dataset.w;
+        var picked = c.getAttribute("aria-pressed") === "true";
+        var isKey = want.indexOf(w) >= 0;
+        if (picked && isKey) c.classList.add("ok");
+        else if (picked && !isKey) { c.classList.add("no"); right = false; }
+        else if (!picked && isKey) { c.classList.add("miss"); right = false; }
+      });
+      var missing = want.filter(function(w){ return have.indexOf(w) < 0; });
+      if (missing.length) msg.push("<li>Missing " + kind + ": <span class='c'>" + missing.join(", ") + "</span></li>");
+    });
+    var node = document.getElementById(item);
+    node.classList.remove("marked-ok", "marked-no");
+    node.classList.add(right ? "marked-ok" : "marked-no");
+    if (right) { got++; fbShow(item, true, "All correct."); }
+    else fbShow(item, false, "Dashed outlines show words you missed.<ul>" + msg.join("") + "</ul>");
+  });
+  setScore("lb", got, 3);
+}
+
+function checkUNE(){
+  var got = 0;
+  UNE_KEY.forEach(function(g){
+    var f = document.getElementById(g.id);
+    var v = norm(f.value);
+    var ok = g.accept.some(function(a){ return norm(a) === v; });
+    f.classList.remove("ok", "no");
+    f.classList.add(ok ? "ok" : "no");
+    if (ok) got++;
+  });
+  var node = document.getElementById("une");
+  node.classList.remove("marked-ok", "marked-no");
+  node.classList.add(got === 2 ? "marked-ok" : "marked-no");
+  fbShow("une", got === 2,
+    got === 2 ? "Both correct."
+      : "Answers: <span class='c'>The people are discussing something.</span> / <span class='c'>The family's at the table.</span>");
+  setScore("une", got, 2);
+}
+
+function checkMT(){
+  var got = 0;
+  MT.forEach(function(q, i){
+    var n = i + 1, id = "mtq" + n;
+    var chosen = state[id];
+    var box = document.querySelector('[data-mcq="' + id + '"]');
+    box.querySelectorAll(".opt").forEach(function(o){
+      o.classList.remove("ok", "no", "key");
+      if (o.dataset.v === q.key) o.classList.add(chosen === q.key ? "ok" : "key");
+      else if (o.dataset.v === chosen) o.classList.add("no");
+    });
+    var node = document.getElementById(id);
+    node.classList.remove("marked-ok", "marked-no");
+    if (!chosen) { fbShow(id, false, "No answer chosen. The answer is <span class='c'>(" + q.key + ")</span>."); }
+    else if (chosen === q.key) { got++; node.classList.add("marked-ok"); }
+    else { node.classList.add("marked-no"); }
+    var rows = ["A", "B", "C", "D"].map(function(L){
+      return "<li><span class='c'>(" + L + ")</span> " + q.script[L] + " — " + q.why[L] + "</li>";
+    }).join("");
+    fbShow(id, chosen === q.key,
+      (chosen === q.key ? "Correct — <span class='c'>(" + q.key + ")</span>."
+        : "Answer: <span class='c'>(" + q.key + ")</span>" + (chosen ? ", you chose (" + chosen + ")." : "."))
+      + "<ul>" + rows + "</ul>");
+  });
+  setScore("mt", got, 8);
+}
+
+function checkLBDQ(){
+  var chosen = state.lbdq;
+  var box = document.querySelector('[data-mcq="lbdq"]');
+  box.querySelectorAll(".opt").forEach(function(o){
+    o.classList.remove("ok", "no", "key");
+    if (o.dataset.v === LBD_KEY) o.classList.add(chosen === LBD_KEY ? "ok" : "key");
+    else if (o.dataset.v === chosen) o.classList.add("no");
+  });
+  var node = document.getElementById("lbdq");
+  node.classList.remove("marked-ok", "marked-no");
+  node.classList.add(chosen === LBD_KEY ? "marked-ok" : "marked-no");
+  fbShow("lbdq", chosen === LBD_KEY,
+    chosen === LBD_KEY
+      ? "Correct — the example sentences describe <span class='c'>picture 3</span>."
+      : "The example sentences describe <span class='c'>picture 3</span> — the woman pointing at the whiteboard.");
+}
+
+var CHECKS = { lb: checkLB, une: checkUNE, mt: checkMT, lbdq: checkLBDQ };
+document.querySelectorAll("[data-check]").forEach(function(b){
+  b.addEventListener("click", function(){ CHECKS[b.dataset.check](); });
+});
+
+/* clear marking only — keeps the student's answers */
+document.querySelectorAll("[data-clearmark]").forEach(function(b){
+  b.addEventListener("click", function(){
+    var g = b.dataset.clearmark;
+    var ids = g === "lb" ? ["lb1", "lb2", "lb3"]
+            : g === "mt" ? MT.map(function(_, i){ return "mtq" + (i + 1); })
+            : [g];
+    ids.forEach(function(id){
+      var node = document.getElementById(id);
+      if (node) {
+        node.classList.remove("marked-ok", "marked-no");
+        node.querySelectorAll(".chip,.opt").forEach(function(c){ c.classList.remove("ok", "no", "miss", "key"); });
+        node.querySelectorAll("input").forEach(function(f){ f.classList.remove("ok", "no"); });
+      }
+      var fb = document.getElementById("fb-" + id);
+      if (fb) fb.classList.remove("show");
+    });
+    var s = document.getElementById("score-" + g);
+    if (s) { s.textContent = ""; s.className = "score"; }
+  });
+});
+
+/* ------------------------------------------------------------------ reset */
+document.getElementById("resetBtn").addEventListener("click", function(){
+  if (!confirm("Clear all your answers on this page?")) return;
+  try { localStorage.removeItem(STORE); } catch (e) {}
+  location.reload();
+});
+</script>
+</body>
+</html>
