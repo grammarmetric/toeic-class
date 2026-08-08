@@ -207,7 +207,7 @@
     <figure class="scan"><img src="img/u02/lbd-intro.jpg" alt="You just received the following fax from the director of your company. Unfortunately, your fax machine is broken and some of the words are unclear."></figure>
     <figure class="scan"><img src="img/u02/lbd-task.jpg" alt="Task: Work with your partner and write out the questions you will ask him or her. Call him or her up, apologize for the problem and ask the questions to get the information you need."></figure>
     <figure class="scan scan-wide"><img src="img/u02/lbd-fax.jpg" alt="Fax Message, Important. Re: August 14 meeting. To Mr. Carson from Barton Donovan. Five pieces of information are deliberately unclear."></figure>
-    <p class="note"><strong>Student B:</strong> your information is in Activity file 2 on page 162 of the book — your teacher will give it to you.</p>
+    <p class="note"><strong>Student B:</strong> your teacher will send you a separate link with your information. Don't ask for it if you are Student A.</p>
 
     <div class="f"><label for="lbd-q">The five questions you will ask</label>
       <textarea id="lbd-q" data-save placeholder="1. …&#10;2. …&#10;3. …&#10;4. …&#10;5. …"></textarea></div>
@@ -221,8 +221,31 @@
 
     <figure class="scan" style="margin-top:16px"><img src="img/u02/lbd-lang.jpg" alt="Useful language"></figure>
     <figure class="scan scan-wide"><img src="img/u02/lbd-langbox.jpg" alt="Opening: I'm sorry to bother you Mr. Donovan, but I'm afraid we couldn't read your fax properly. Closing: Thanks very much. That's all the information I need. I will take care of this right away."></figure>
-    <div class="f"><label for="lbd-notes">The answers you got from your partner</label>
-      <textarea id="lbd-notes" data-save></textarea></div>
+
+    <h3 style="font-size:16.5px;color:var(--accent);margin:22px 0 4px">After the call</h3>
+    <p class="note" style="margin-top:0">Write down the five missing pieces of information you got
+    from Mr. Donovan, then check whether you heard them correctly.</p>
+
+    <div class="item" id="call1" data-group="call">
+      <div class="f"><label for="call1-in">1. What date is he arriving?</label>
+        <input type="text" id="call1-in" data-save></div><div class="fb" id="fb-call1"></div></div>
+    <div class="item" id="call2" data-group="call">
+      <div class="f"><label for="call2-in">2. What time is his plane scheduled to land?</label>
+        <input type="text" id="call2-in" data-save></div><div class="fb" id="fb-call2"></div></div>
+    <div class="item" id="call3" data-group="call">
+      <div class="f"><label for="call3-in">3. What is the main purpose of his visit?</label>
+        <input type="text" id="call3-in" data-save></div><div class="fb" id="fb-call3"></div></div>
+    <div class="item" id="call4" data-group="call">
+      <div class="f"><label for="call4-in">4. What must you discuss in the meeting?</label>
+        <input type="text" id="call4-in" data-save></div><div class="fb" id="fb-call4"></div></div>
+    <div class="item" id="call5" data-group="call">
+      <div class="f"><label for="call5-in">5. Who else does he want to invite?</label>
+        <input type="text" id="call5-in" data-save></div><div class="fb" id="fb-call5"></div></div>
+    <div class="row">
+      <button class="btn" type="button" data-check="call">Check what I heard</button>
+      <button class="btn ghost sm" type="button" data-clearmark="call">Try again</button>
+      <span class="score" id="score-call"></span>
+    </div>
   </section>
 
   <!-- ================= D · FURTHER STUDY ================= -->
@@ -270,6 +293,20 @@ initLesson({
          script:{A:"I sent it by ship.",B:"There were a lot of packages to send.",C:"We used Freightstar, as usual."}},
     tp6:{a:"B", why:"Key words: <em>How? change, computer password</em>. <em>Support staff</em> are the people who would help with a computer problem.",
          script:{A:"Yes, I think you need a change.",B:"You'll have to talk to the support staff.",C:"To keep your computer safe."}},
+
+    /* --- C Learn by doing: what Student A collected on the call.
+           These match Activity file 2 (unit-02-file2.html). --- */
+    call1:{any:["august 13","13 august","13th august","august 13th","tuesday"],
+           show:"Tuesday, August 13", note:"The day before the August 14 meeting."},
+    call2:{any:["9:15","9.15","915","quarter past nine","21:15","2115"],
+           show:"9:15 p.m.", note:"He is flying with United Airlines."},
+    call3:{any:["accuron","watch","water damage","complaint","problem"],
+           show:"The problem with the Accuron Line of watches",
+           note:"There have been many complaints about water damage."},
+    call4:{any:["deal with","how we can","solve","fix","handle"],
+           show:"How we can deal with the problem"},
+    call5:{any:["rick smith","mary davis","smith","davis"],
+           show:"Rick Smith and Mary Davis"},
 
     /* --- Understanding natural English --- */
     une1:{accept:["why did you","why'd you","why did ya"], show:"Why did you", note:"<em>Why did you leave your last company?</em>"},

@@ -280,7 +280,11 @@ function initLesson(LESSON) {
       ? node : node.querySelector("input[type=text],textarea");
     if (!f) return true;
     var v = norm(f.value);
-    var ok = k.accept.some(function (a) { return norm(a) === v; });
+    /* `accept` = the whole answer must match one of these;
+       `any`    = the answer must contain one of these, for open-ended replies */
+    var ok = k.accept
+      ? k.accept.some(function (a) { return norm(a) === v; })
+      : (v.length > 0 && k.any.some(function (a) { return v.indexOf(norm(a)) >= 0; }));
     f.classList.remove("ok", "no");
     f.classList.add(ok ? "ok" : "no");
     mark(id, ok);
@@ -305,7 +309,7 @@ function initLesson(LESSON) {
     var k = KEY[id];
     if (!k) return true;
     if (k.set) return checkSet(id);
-    if (k.accept) return checkText(id);
+    if (k.accept || k.any) return checkText(id);
     if (document.querySelector('[data-pick="' + id + '"]')) return checkPick(id);
     return checkMcq(id);
   }
