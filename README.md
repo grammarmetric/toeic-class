@@ -14,14 +14,25 @@ tapescript behind a reveal.
 
 ```
 index.html            lesson index
+slides-NN.html        5-minute warm-up deck, run before the unit
 unit-NN.html          one lesson per unit
 unit-02-file2.html    Student B role card for the Unit 2 pair work
                       (unlinked on purpose — send the URL only to Student B)
-assets/lesson.css     shared styling
+assets/slides.css     deck styling
+assets/slides.js      deck runner
+assets/lesson.css     lesson styling
 assets/lesson.js      shared marking engine
 img/uNN/              per-exercise crops rendered from the unit PDF at 220 dpi
 audio/uNN/            the unit's class-audio tracks
 ```
+
+## Warm-up decks
+
+`slides-NN.html` is a standalone deck: `.slide` sections inside `.deck`, one
+`.notes` div per slide in the same order. Elements with class `step` inside a
+slide reveal one press at a time, so you can ask before showing the answer.
+Keys: → ← space, **N** notes, **F** full screen; click zones and swipe also work.
+No build step — add a `<section class="slide">` and a matching `<div class="notes">`.
 
 ## Adding a unit
 

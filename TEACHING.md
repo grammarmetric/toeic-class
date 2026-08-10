@@ -40,16 +40,44 @@ lose the shared pause-and-discuss moments.
 
 ---
 
+## The warm-up decks
+
+Every day opens with a 5–7 minute presentation that introduces the part and its
+one tactic **before** anyone opens the book. Run it from your screen — students
+do not need the link.
+
+| Key | Does |
+|---|---|
+| **→** / space / click the right of the screen | Next — reveals answers one at a time inside a slide, then moves on |
+| **←** / click the left | Back |
+| **N** | Your teacher notes, along the bottom. **Hide them before you share your screen.** |
+| **F** | Full screen |
+| Swipe | Works on a phone or tablet |
+
+Answers on the example slides are hidden until you press →, so **ask the class
+first, then reveal**. That is the whole design — the decks are built to be
+interrupted, not read out.
+
+| Day | Deck |
+|---|---|
+| 1 | `slides-01.html` — 7 slides |
+| 2 | `slides-05.html` — 8 slides |
+| 3 | `slides-02.html` — 8 slides |
+| 4 | `slides-06.html` — 8 slides |
+
+---
+
 # Day 1 · Unit 1 — Listening Part 1: Photographs
 
 `unit-01.html` · book pages 9–12 · audio 0:37 / 0:24 / 0:39 / **3:24**
 
 | Time | Section | What you do |
 |---|---|---|
-| 0:00 | Settle | Open the link together. Ask what they already know about Part 1. |
-| 0:05 | **A Focus** + Test tip | Read the Focus box aloud. Point out: distractors are wrong **nouns and verbs**. |
-| 0:10 | **1 Language building** | Tap the nouns and verbs for pictures 1–3. Let them argue in pairs first. → **Check pictures 1–3** |
-| 0:25 | *Follow up* | Two more nouns and verbs each, in the box. Compare in pairs, then open *Possible answers*. |
+| 0:00 | Settle | Say hello, get the link open on all four devices. |
+| 0:03 | ▶ **Warm-up deck** | `slides-01.html` — the trap is the wrong noun or wrong verb. Ask before revealing. |
+| 0:10 | **A Focus** + Test tip | Brief — the deck made the point. Just read the Focus box together. |
+| 0:13 | **1 Language building** | Tap the nouns and verbs for pictures 1–3. Let them argue in pairs first. → **Check pictures 1–3** |
+| 0:27 | *Follow up* | Two more nouns and verbs each, in the box. Compare in pairs, then open *Possible answers*. |
 | 0:32 | **2 Test tactic** | Read the grey box. They write **two sentences per picture**. Circulate — this is the core skill. |
 | 0:45 | ▶ audio (0:37) | Play once. After each statement, pause: *how close were you?* Then open the Tapescript. |
 | **0:52** | **Break — 8 min** | |
@@ -76,7 +104,8 @@ homework without guilt if the mini-test discussion runs long.
 | Time | Section | What you do |
 |---|---|---|
 | 0:00 | Settle | Homework from Day 1: two students read their three sentences, class picks the correct one. |
-| 0:10 | **A Focus** + Test tip | The idea: decide the *part of speech* before you look at the options. |
+| 0:06 | ▶ **Warm-up deck** | `slides-05.html` — four options, one word, four forms. Plus the 2-pass idea. |
+| 0:13 | **A Focus** + Test tip | Brief — decide the *part of speech* before you look at the options. |
 | 0:15 | **1 Language building A** | Six sentences, noun/verb/adjective/adverb only. → **Check parts of speech** |
 | 0:28 | **1 Language building B** | Same six as real questions. → **Check questions 1–6**. Draw the link: the part of speech told them the answer. |
 | 0:40 | **2 Test tactic** | Explain the 2-pass method from the box. |
@@ -108,8 +137,8 @@ hidden unless you send it.
 
 | Time | Section | What you do |
 |---|---|---|
-| 0:00 | Settle | Part 2 has **no pictures and nothing printed** — only listening. Say so up front. |
-| 0:05 | **A Focus** + Test tip | Answers often don't answer the question directly. |
+| 0:00 | Settle | Get everyone open and quiet — this day is almost all listening. |
+| 0:03 | ▶ **Warm-up deck** | `slides-02.html` — nothing is printed; the three distractor types; answers come sideways. |
 | 0:10 | **1 Language building** | Match each question with **two** answers from a–f. → **Check the matches** |
 | 0:20 | *Follow up* | Two more answers each, then open *Possible answers*. |
 | 0:26 | **2 Test tactic** — key words | ▶ (0:35). They note three key words per question, then make an answer. Open *Key words & tapescript*. |
@@ -141,7 +170,8 @@ A double-length unit — eight book pages. **Section C is your overflow.**
 | Time | Section | What you do |
 |---|---|---|
 | 0:00 | Settle | Day 3 homework: two students test the class with their question and distractors. |
-| 0:08 | **A Focus** + Test tip | Part 6 tests the same verb in different tenses. Read the clue in the *rest* of the text. |
+| 0:05 | ▶ **Warm-up deck** | `slides-06.html` — the answer is often in a *different* sentence. |
+| 0:12 | **A Focus** + Test tip | One line — the deck already made the point. |
 | 0:13 | **1 Language building** | Present box, sentences 1–4. Past box, sentences 5–8. They type the verb form. → **Check sentences 1–8** |
 | 0:33 | *Follow up* | Which word in each sentence gave the tense away? Do this out loud — it's the whole unit. |
 | 0:40 | **2 Test tactic A** | The Herbert Mansfield text: present or past for seven blanks. → **Check present or past** |
