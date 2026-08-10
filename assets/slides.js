@@ -11,6 +11,7 @@
   var i = 0, step = 0;
   var prog = document.querySelector(".prog");
   var count = document.querySelector(".count");
+  var deck = document.querySelector(".deck");
 
   function steps(n) { return [].slice.call(slides[n].querySelectorAll(".step")); }
 
@@ -35,7 +36,7 @@
     i = n;
     step = atEnd ? steps(i).length : 0;
     paint();
-    slides[i].scrollTop = 0;
+    if (deck) deck.scrollTop = 0;
   }
 
   function next() {
@@ -58,9 +59,13 @@
     else if (k === "f" || k === "F") { toggleFull(); }
   });
 
-  var zp = document.querySelector(".zone.prev"), zn = document.querySelector(".zone.next");
-  if (zp) zp.addEventListener("click", prev);
-  if (zn) zn.addEventListener("click", next);
+  /* Click to advance. Handled on the deck rather than with overlay hit-zones:
+     a fixed overlay would cover the scrollbar and swallow wheel scrolling. */
+  if (deck) deck.addEventListener("click", function (e) {
+    if (e.target.closest("a,button,input,select,textarea")) return;
+    if (window.getSelection && String(window.getSelection())) return;
+    (e.clientX < window.innerWidth * 0.28) ? prev() : next();
+  });
 
   /* swipe on a phone */
   var x0 = null, y0 = null;

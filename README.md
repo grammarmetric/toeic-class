@@ -31,8 +31,14 @@ audio/uNN/            the unit's class-audio tracks
 `slides-NN.html` is a standalone deck: `.slide` sections inside `.deck`, one
 `.notes` div per slide in the same order. Elements with class `step` inside a
 slide reveal one press at a time, so you can ask before showing the answer.
-Keys: → ← space, **N** notes, **F** full screen; click zones and swipe also work.
+Keys: → ← space, **N** notes, **F** full screen; clicking the left/right of the
+slide and swiping also work.
 No build step — add a `<section class="slide">` and a matching `<div class="notes">`.
+
+The **deck** is the scroll container, not the slide. A slide is
+`min-height:100%` and centres its content, so it grows instead of clipping on a
+short window; if the slide scrolled instead, its scrollbar would appear at the
+edge of the centred 1000px column rather than the window.
 
 ## Adding a unit
 
