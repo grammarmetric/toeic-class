@@ -35,10 +35,13 @@ a.card:hover{border-color:var(--sky);box-shadow:0 2px 10px rgba(20,40,70,.07)}
 .card.soon{opacity:.62}
 .card.soon .u{background:#aab6c4}
 .card.soon .go{color:var(--dim);font-size:12px;font-weight:600}
-.warm{display:block;margin:-6px 0 16px 62px;font-size:13.5px;color:#7a5c3a;
+.extras{display:flex;flex-direction:column;gap:6px;margin:-6px 0 16px 62px}
+.warm{display:block;font-size:13.5px;color:#7a5c3a;
       text-decoration:none;font-weight:600}
 .warm:hover{color:#a2172b;text-decoration:underline}
 .warm span{opacity:.72;font-weight:400}
+.warm.vocab{color:#1f5fa8}
+.warm.vocab:hover{color:#123e6e}
 .pill{display:inline-block;border-radius:999px;padding:1px 9px;font-size:11.5px;font-weight:600;
       margin-left:6px;vertical-align:1px}
 .pill.l{background:#e4f5fa;color:#1c6d85}
@@ -63,7 +66,10 @@ a.card:hover{border-color:var(--sky);box-shadow:0 2px 10px rgba(20,40,70,.07)}
     </div>
     <div class="go">→</div>
   </a>
-  <a class="warm" href="slides-01.html">▶ Warm-up presentation <span>· 5 min, before the book</span></a>
+  <div class="extras">
+    <a class="warm" href="slides-01.html">▶ Warm-up presentation <span>· 5 min, before the book</span></a>
+    <a class="warm vocab" href="vocab-01.html">◆ Vocabulary practice <span>· 23 words, four rounds</span></a>
+  </div>
 
   <a class="card" href="unit-05.html">
     <div class="u read">Day 2<br>Unit 5</div>
@@ -73,7 +79,10 @@ a.card:hover{border-color:var(--sky);box-shadow:0 2px 10px rgba(20,40,70,.07)}
     </div>
     <div class="go">→</div>
   </a>
-  <a class="warm" href="slides-05.html">▶ Warm-up presentation <span>· 5 min, before the book</span></a>
+  <div class="extras">
+    <a class="warm" href="slides-05.html">▶ Warm-up presentation <span>· 5 min, before the book</span></a>
+    <a class="warm vocab" href="vocab-05.html">◆ Vocabulary practice <span>· 37 words, four rounds</span></a>
+  </div>
 
   <a class="card" href="unit-02.html">
     <div class="u">Day 3<br>Unit 2</div>
@@ -83,7 +92,10 @@ a.card:hover{border-color:var(--sky);box-shadow:0 2px 10px rgba(20,40,70,.07)}
     </div>
     <div class="go">→</div>
   </a>
-  <a class="warm" href="slides-02.html">▶ Warm-up presentation <span>· 5 min, before the book</span></a>
+  <div class="extras">
+    <a class="warm" href="slides-02.html">▶ Warm-up presentation <span>· 5 min, before the book</span></a>
+    <a class="warm vocab" href="vocab-02.html">◆ Vocabulary practice <span>· 26 words, four rounds</span></a>
+  </div>
 
   <a class="card" href="unit-06.html">
     <div class="u read">Day 4<br>Unit 6</div>
@@ -93,7 +105,10 @@ a.card:hover{border-color:var(--sky);box-shadow:0 2px 10px rgba(20,40,70,.07)}
     </div>
     <div class="go">→</div>
   </a>
-  <a class="warm" href="slides-06.html">▶ Warm-up presentation <span>· 5 min, before the book</span></a>
+  <div class="extras">
+    <a class="warm" href="slides-06.html">▶ Warm-up presentation <span>· 5 min, before the book</span></a>
+    <a class="warm vocab" href="vocab-06.html">◆ Vocabulary practice <span>· 25 words, four rounds</span></a>
+  </div>
 
   <h2>Next week</h2>
   <div class="card soon">
@@ -104,6 +119,9 @@ a.card:hover{border-color:var(--sky);box-shadow:0 2px 10px rgba(20,40,70,.07)}
     </div>
     <div class="go">Soon</div>
   </div>
+  <div class="extras">
+    <a class="warm vocab" href="vocab-03.html">◆ Vocabulary practice <span>· 31 words, ready now</span></a>
+  </div>
   <div class="card soon">
     <div class="u">Unit 7</div>
     <div class="b">
@@ -112,9 +130,14 @@ a.card:hover{border-color:var(--sky);box-shadow:0 2px 10px rgba(20,40,70,.07)}
     </div>
     <div class="go">Soon</div>
   </div>
+  <div class="extras">
+    <a class="warm vocab" href="vocab-07.html">◆ Vocabulary practice <span>· 34 words, ready now</span></a>
+  </div>
 
   <p class="note">Open a lesson on any device — phone, tablet or laptop. Your answers stay in that browser
-  and are not sent anywhere, so use the same device each time if you want to pick up where you left off.</p>
+  and are not sent anywhere, so use the same device each time if you want to pick up where you left off.
+  The vocabulary practice works the same way, and can be replayed as often as you like — it asks about
+  the words you keep getting wrong more often than the ones you already know.</p>
 </main>
 </body>
 </html>

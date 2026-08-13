@@ -1,0 +1,112 @@
+/* Vocabulary game chrome. Loaded after lesson.css and reusing its tokens,
+   so a vocab page sits beside the unit pages without looking like a
+   different site. Only the game-specific pieces live here. */
+
+.vhud{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:0 0 16px}
+.vstat{flex:0 0 auto;min-width:84px;background:var(--card);border:1px solid var(--line);
+       border-radius:11px;padding:9px 13px}
+.vstat .k{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;
+          text-transform:uppercase;color:var(--dim)}
+.vstat .v{display:block;font-size:22px;font-weight:700;line-height:1.15;
+          font-variant-numeric:tabular-nums}
+.vstat .v.hot{color:var(--accent)}
+.vmeter{flex:1 1 190px;min-width:170px;background:var(--card);border:1px solid var(--line);
+        border-radius:11px;padding:9px 13px;display:flex;flex-direction:column;justify-content:center}
+.vmeter-h{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--dim);
+          font-weight:600;margin:0 0 6px}
+.vbar{height:7px;border-radius:4px;background:#e5eaf1;overflow:hidden}
+.vbar i{display:block;height:100%;background:var(--ok);border-radius:4px;transition:width .3s}
+
+.vcard{padding:18px 16px}
+.vmid{text-align:center}
+.vmid .vnextrow{justify-content:center}
+
+.vround{margin:0 0 14px}
+.vround-h{display:flex;align-items:baseline;gap:9px;margin:0 0 8px;flex-wrap:wrap}
+.vr-n{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+.vr-t{font-size:15px;font-weight:700;color:var(--accent)}
+.vdots{display:flex;gap:5px;flex-wrap:wrap}
+.vdots .d{width:100%;max-width:26px;height:5px;border-radius:3px;background:#e0e6ee;flex:1 1 14px}
+.vdots .d.ok{background:var(--ok)}
+.vdots .d.no{background:var(--danger)}
+.vdots .d.now{background:var(--navy-700)}
+
+.vask{margin:0 0 10px;font-size:12.5px;font-weight:700;letter-spacing:.05em;
+      text-transform:uppercase;color:var(--dim)}
+.vretry{margin:0 0 10px;font-size:13.5px;color:#8a5a1b;background:#fdf5e8;
+        border:1px solid #f0dcbb;border-radius:8px;padding:8px 11px}
+.vdef{margin:0 0 4px;font-size:21px;line-height:1.35;letter-spacing:-.2px}
+.vpos{margin:0 0 16px;font-size:13.5px;color:var(--dim);font-style:italic}
+.vsent{margin:0 0 16px;font-size:19px;line-height:1.5}
+.vblank{display:inline-block;min-width:74px;text-align:center;border-bottom:2px solid var(--accent);
+        color:var(--accent);font-weight:700}
+.vhint{margin:-8px 0 16px;font-size:13.5px;color:var(--dim);font-variant-numeric:tabular-nums}
+
+.vopts{display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:560px){ .vopts{grid-template-columns:1fr 1fr} }
+.vopt{display:flex;align-items:center;gap:11px;width:100%;text-align:left;
+      border:1px solid #c6d2e0;background:#fff;border-radius:10px;padding:12px 13px;
+      cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;
+      transition:border-color .12s,background .12s}
+.vopt:hover:not(:disabled){border-color:var(--sky)}
+.vopt:disabled{cursor:default}
+.vkey{flex:0 0 auto;width:23px;height:23px;border-radius:6px;background:#eef2f7;color:var(--dim);
+      font-size:12.5px;font-weight:700;display:grid;place-items:center}
+.vw{font-size:16.5px;font-weight:600;min-width:0;overflow-wrap:anywhere}
+.vopt.ok{background:var(--okbg);border-color:var(--ok)}
+.vopt.ok .vkey{background:var(--ok);color:#fff}
+.vopt.no{background:var(--dangerbg);border-color:var(--danger)}
+.vopt.no .vkey{background:var(--danger);color:#fff}
+
+.vtype{display:flex;gap:8px;flex-wrap:wrap}
+.vtype input{flex:1 1 190px;min-width:0;font-size:18px;padding:11px 13px}
+.vtype input.ok{border-color:var(--ok);background:var(--okbg)}
+.vtype input.no{border-color:var(--danger);background:var(--dangerbg)}
+
+.vtimer{height:5px;border-radius:3px;background:#e5eaf1;overflow:hidden;margin:16px 0 0}
+.vtimer i{display:block;height:100%;width:100%;background:var(--accent);border-radius:3px}
+
+.vfb{display:none;margin:16px 0 0;border-radius:10px;padding:12px 13px;font-size:14.5px}
+.vfb.show{display:block}
+.vfb.ok{background:var(--okbg);border:1px solid #bfe6de}
+.vfb.no{background:var(--dangerbg);border:1px solid #f2cfcd}
+.vy{color:#1b6f62;font-size:15.5px}
+.vn{color:#9c3330;font-size:15.5px}
+.vpts{font-weight:700;color:#1b6f62;font-variant-numeric:tabular-nums}
+.vword{margin:9px 0 0;line-height:1.5}
+.vex{margin:6px 0 0;font-style:italic;color:var(--navy-700);line-height:1.5}
+.vsrc{margin:8px 0 0;font-size:12px;color:var(--dim)}
+.vnextrow{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:14px 0 0}
+.vnextrow .btn{text-decoration:none;display:inline-block}
+.vhintk{font-size:12.5px;color:var(--dim)}
+
+.vstep{margin:0 0 4px;font-size:11.5px;font-weight:700;letter-spacing:.06em;
+       text-transform:uppercase;color:var(--dim)}
+.vbig{margin:0 0 10px;font-size:27px;letter-spacing:-.4px}
+.vblurb{margin:0 auto;max-width:46ch;color:var(--dim);font-size:14.5px;line-height:1.55}
+.vprev{margin-top:10px;color:var(--navy-700)}
+
+.vfinal{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:16px 0 0}
+@media(min-width:640px){ .vfinal{grid-template-columns:repeat(4,1fr)} }
+.vfinal div{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.vfinal .k{display:block;font-size:11.5px;font-weight:700;letter-spacing:.05em;
+           text-transform:uppercase;color:var(--dim)}
+.vfinal .v{display:block;font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.vshaky-h{margin:18px 0 8px;font-size:13px;font-weight:700;color:var(--dim);
+          letter-spacing:.05em;text-transform:uppercase}
+.vshaky{display:flex;flex-wrap:wrap;gap:6px}
+.vtag{background:#fff;border:1px solid #f0c9c6;color:#9c3330;border-radius:999px;
+      padding:5px 12px;font-size:13.5px}
+
+/* ---------- reference word list ---------- */
+.wlist{margin:12px 0 0;border-top:1px solid var(--line)}
+.wrow{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}
+.wl{flex:1 1 auto;min-width:0;font-size:14.5px;line-height:1.5}
+.wl b{font-size:15.5px}
+.wl i{color:var(--dim);font-size:13px}
+.wex{display:block;font-style:italic;color:var(--navy-700);margin:3px 0 0}
+.wm{flex:0 0 auto;display:flex;gap:4px;padding-top:6px}
+.md{width:8px;height:8px;border-radius:50%;background:#dde4ec}
+.md.on{background:var(--ok)}
+
+@media print{ .vhud,.vcard{display:none} }
