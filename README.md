@@ -104,6 +104,38 @@ distractors from the same part of speech, and below four it silently falls back
 to a mixed set, which lets a student pick the answer on grammar alone. Several
 units needed extra adjectives and adverbs from the 600 book for this reason.
 
+## Cutting a new unit's artwork
+
+The unit PDFs are scans with no text layer, so the crops are cut by pixel
+geometry. The three scripts live in `tools/` (they used to live in a scratchpad
+and had to be rewritten from scratch once — don't move them back):
+
+```powershell
+# 1. render the unit at 220 dpi
+pdftoppm -r 220 -jpeg "Tactics for TOEIC - Unit 03.pdf" pages/u03
+
+# 2. find the exercises by their ink bands
+tools\bands.ps1 -Path pages\u03-1.jpg -X0 820 -X1 2075      # main column
+tools\bands.ps1 -Path pages\u03-1.jpg -X0 370 -X1 810       # sidebar
+tools\bands.ps1 -Path pages\u03-3.jpg -X0 860 -X1 1495 -Gap 4   # -Gap 4 splits a rule off the text under it
+
+# 3. write the rects into a TSV, then cut them
+tools\crop.ps1 -Spec tools\spec-u03.tsv -PageDir pages -OutDir img\u03 -Prefix u03
+
+# 4. eyeball all 45 crops at once
+tools\sheet.ps1 -Dir img\u03 -Out sheet.jpg -Cols 4 -Cell 460 -Rows 5
+```
+
+Rects are written generously and auto-tightened to the ink inside them, so they
+only have to be right to within a dozen pixels. Two things that will bite:
+
+- **The padding is clamped to the rect you asked for.** The book prints two
+  columns about 15px apart, so a padded edge otherwise drags the neighbouring
+  column's question number into the crop. In practice the left column caps at
+  x1495 and the right column starts at x1500.
+- **The pink `unit N` page-edge tab bleeds into right-edge crops** — cap x
+  around 2078 at 220 dpi.
+
 ## Checks
 
 ```
