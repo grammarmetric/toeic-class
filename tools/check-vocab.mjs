@@ -10,7 +10,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const UNITS = [1, 2, 3, 5, 6, 7];
+const UNITS = [1, 2, 3, 4, 5, 6, 7];
 const POS = ["n", "v", "adj", "adv", "phr"];
 
 let pass = 0, fails = [];
@@ -18,7 +18,9 @@ function ok(cond, msg) { if (cond) pass++; else fails.push(msg); }
 
 /* ------------------------------------------------------------ load banks */
 const BANKS = {};
-globalThis.Vocab = { register: (u, d) => { BANKS[u] = d; } };
+/* words-review.js reads the banks back out again, so the stub has to offer the
+   same two methods the real engine does, not just register. */
+globalThis.Vocab = { register: (u, d) => { BANKS[u] = d; }, bank: (u) => BANKS[u] };
 for (const u of UNITS) {
   const f = path.join(ROOT, "assets", `words-0${u}.js`);
   ok(fs.existsSync(f), `assets/words-0${u}.js is missing`);
@@ -154,7 +156,7 @@ for (const m of idx.matchAll(/href="([^"#:]+\.html)"/g)) {
   ok(fs.existsSync(path.join(ROOT, m[1])), `index.html links to ${m[1]}, which does not exist`);
 }
 /* Unit pages that exist should offer their vocabulary page, and vice versa. */
-for (const u of [1, 2, 5, 6]) {
+for (const u of UNITS) {
   const h = fs.readFileSync(path.join(ROOT, `unit-0${u}.html`), "utf8");
   ok(h.includes(`vocab-0${u}.html`), `unit-0${u}.html: no link to its vocabulary page`);
   const m = h.match(/The (\d+) words behind this unit|full (\d+) words are drilled/);
@@ -171,6 +173,65 @@ for (const m of idx.matchAll(/vocab-0(\d)\.html"[^<]*<span>· (\d+) words/g)) {
   const u = Number(m[1]), stated = Number(m[2]);
   ok(BANKS[u] && stated === BANKS[u].words.length,
     `index.html says ${stated} words for unit ${u}, the bank has ${BANKS[u]?.words.length}`);
+}
+
+/* ------------------------------------------------- the Units 1–7 sprint */
+/* words-review.js holds no words of its own — it folds the seven unit banks
+   into one, so the only thing worth checking is that the fold is complete and
+   that every count printed against it matches what the fold produces. */
+{
+  const f = path.join(ROOT, "assets", "words-review.js");
+  ok(fs.existsSync(f), "assets/words-review.js is missing");
+  if (fs.existsSync(f)) {
+    new Function("Vocab", fs.readFileSync(f, "utf8"))(globalThis.Vocab);
+    const rev = BANKS[0];
+    ok(!!rev, "words-review.js did not register a bank");
+    if (rev) {
+      const seen = new Set();
+      let expected = 0;
+      for (const u of UNITS) {
+        for (const w of BANKS[u].words) {
+          const id = w.w.toLowerCase();
+          if (!seen.has(id)) { seen.add(id); expected++; }
+        }
+      }
+      ok(rev.words.length === expected,
+        `the sprint bank has ${rev.words.length} words, the seven units fold to ${expected}`);
+      const heads = rev.words.map((w) => w.w.toLowerCase());
+      ok(new Set(heads).size === heads.length,
+        "the sprint bank contains a duplicate headword — it could become its own distractor");
+      for (const [p, n] of Object.entries(
+        rev.words.reduce((a, w) => (a[w.pos] = (a[w.pos] || 0) + 1, a), {}))) {
+        ok(n >= 4, `sprint: only ${n} "${p}" words — need 4+ so same-pos distractors exist`);
+      }
+
+      const rp = path.join(ROOT, "vocab-review.html");
+      ok(fs.existsSync(rp), "vocab-review.html is missing");
+      if (fs.existsSync(rp)) {
+        const h = fs.readFileSync(rp, "utf8");
+        for (const u of UNITS) {
+          ok(h.includes(`assets/words-0${u}.js`), `vocab-review.html: does not load words-0${u}.js`);
+        }
+        /* Load order is the one thing that can silently empty this page. */
+        ok(h.indexOf("assets/words-review.js") > h.lastIndexOf("assets/words-07.js"),
+          "vocab-review.html: words-review.js must load after every unit bank");
+        ok(h.includes("initVocab(0)"), "vocab-review.html: does not call initVocab(0)");
+        ok(h.includes('id="vgame"') && h.includes('id="wordlist"'),
+          "vocab-review.html: missing a mount point");
+        ok(h.includes('id="resetBtn"'), "vocab-review.html: no reset button");
+        ok(/name="robots"[^>]*noindex/.test(h), "vocab-review.html: missing the noindex robots meta");
+      }
+
+      /* Both the checkpoint page and the index quote the sprint's size. */
+      for (const p of ["review-01.html", "index.html"]) {
+        const h = fs.readFileSync(path.join(ROOT, p), "utf8");
+        for (const m of h.matchAll(/(\d+) (?:of them|words, Units 1–7)/g)) {
+          ok(Number(m[1]) === rev.words.length,
+            `${p} says ${m[1]} words for the sprint, the fold produces ${rev.words.length}`);
+        }
+      }
+    }
+  }
 }
 
 /* ---------------------------------------------------------------- report */

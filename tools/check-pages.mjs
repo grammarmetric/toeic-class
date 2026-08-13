@@ -2,22 +2,14 @@
    Drives real Chrome over CDP — no puppeteer — through a complete run of
    every unit and asserts what ended up on screen.
 
-   Two CDP gotchas, both guarded below: filter targets to type === "page" or
-   you attach to an extension background page and measure an empty document;
-   and run the width check with mobile emulation OFF, or Chrome widens the
-   layout viewport to fit overflow and the assertion passes on a page that
-   visibly overflows. localStorage is cleared before each run, otherwise
-   mastery saved by an earlier run changes which words get asked. */
-import { existsSync, mkdirSync, writeFileSync, readFileSync } from "node:fs";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
-import { spawn } from "node:child_process";
+   The Chrome plumbing and the two CDP gotchas it guards live in cdp.mjs.
+   The one that belongs here: localStorage is cleared before each run,
+   otherwise mastery saved by an earlier run changes which words get asked. */
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import { ROOT, launch, sleep } from "./cdp.mjs";
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const PORT = 8124;
-const UNITS = [1, 2, 3, 5, 6, 7];
-const shots = join(ROOT, "tools", "shots");
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const UNITS = [1, 2, 3, 4, 5, 6, 7];
 
 let pass = 0;
 const fails = [];
@@ -30,81 +22,6 @@ function ok(cond, msg, detail = "") {
 const BANKS = {};
 globalThis.Vocab = { register: (u, d) => { BANKS[u] = d; } };
 for (const u of UNITS) new Function("Vocab", readFileSync(join(ROOT, "assets", `words-0${u}.js`), "utf8"))(globalThis.Vocab);
-
-const CHROME = [
-  "C:/Program Files/Google/Chrome/Application/chrome.exe",
-  "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
-].find(existsSync);
-if (!CHROME) { console.error("Chrome not found"); process.exit(1); }
-
-mkdirSync(shots, { recursive: true });
-const server = spawn(process.execPath, [join(ROOT, "tools", "serve.js"), String(PORT)], { stdio: "ignore" });
-const chrome = spawn(CHROME, [
-  "--headless=new", "--disable-gpu", "--no-sandbox", "--hide-scrollbars",
-  "--user-data-dir=" + join(ROOT, "tools", ".chrome-profile"),
-  "--remote-debugging-port=9334", "about:blank"
-], { stdio: "ignore" });
-
-async function cdp() {
-  for (let i = 0; i < 60; i++) {
-    try {
-      const list = await (await fetch("http://127.0.0.1:9334/json/list")).json();
-      const page = list.find((t) => t.type === "page");   /* must be "page" */
-      if (page) return page.webSocketDebuggerUrl;
-    } catch {}
-    await sleep(250);
-  }
-  throw new Error("no CDP page target");
-}
-
-class Client {
-  constructor(ws) { this.ws = ws; this.id = 0; this.waits = new Map(); this.logs = []; this.failed = []; }
-  static async open(url) {
-    const ws = new WebSocket(url);
-    const c = new Client(ws);
-    await new Promise((res, rej) => { ws.onopen = res; ws.onerror = rej; });
-    ws.onmessage = (ev) => {
-      const m = JSON.parse(ev.data);
-      if (m.id && c.waits.has(m.id)) {
-        const { res, rej } = c.waits.get(m.id);
-        c.waits.delete(m.id);
-        m.error ? rej(new Error(m.error.message)) : res(m.result);
-      }
-      if (m.method === "Runtime.consoleAPICalled" && m.params.type === "error")
-        c.logs.push(m.params.args.map((a) => a.value ?? a.description).join(" "));
-      if (m.method === "Runtime.exceptionThrown")
-        c.logs.push(m.params.exceptionDetails.text + " " +
-                    (m.params.exceptionDetails.exception?.description || ""));
-      if (m.method === "Network.loadingFailed") c.failed.push(m.params.errorText);
-    };
-    await c.send("Runtime.enable");
-    await c.send("Network.enable");
-    return c;
-  }
-  send(method, params = {}) {
-    const id = ++this.id;
-    return new Promise((res, rej) => {
-      this.waits.set(id, { res, rej });
-      this.ws.send(JSON.stringify({ id, method, params }));
-    });
-  }
-  async eval(expression) {
-    const r = await this.send("Runtime.evaluate", { expression, returnByValue: true, awaitPromise: true });
-    if (r.exceptionDetails) throw new Error(r.exceptionDetails.text + " :: " + expression.slice(0, 90));
-    return r.result.value;
-  }
-  async go(url, { width = 1280, height = 900 } = {}) {
-    /* mobile:false is deliberate — see the header note */
-    await this.send("Emulation.setDeviceMetricsOverride", { width, height, deviceScaleFactor: 1, mobile: false });
-    this.logs = []; this.failed = [];
-    await this.send("Page.navigate", { url });
-    await sleep(600);
-  }
-  async shot(name) {
-    const r = await this.send("Page.captureScreenshot", { format: "png" });
-    writeFileSync(join(shots, name + ".png"), Buffer.from(r.data, "base64"));
-  }
-}
 
 /* Reads whatever question is on screen and works out the right answer from
    the bank, so the suite can play a genuinely correct run rather than
@@ -148,8 +65,6 @@ const STATE = `(()=>{
   return 'unknown';
 })()`;
 
-const base = "http://localhost:" + PORT;
-
 /* Clearing storage from outside does not survive navigation — the page
    flushes its in-memory state on `pagehide`. Use the page's own reset
    button, which is what a student would use anyway. */
@@ -159,10 +74,9 @@ async function resetPage(c, url) {
   await sleep(800);
 }
 
+const { c, base, stop } = await launch({ port: 8124, debugPort: 9334, profile: ".chrome-profile" });
+
 try {
-  await sleep(800);
-  const c = await Client.open(await cdp());
-  await c.send("Page.enable");
 
   /* ---------------------------------------------------------- index */
   await c.go(base + "/index.html");
@@ -170,8 +84,10 @@ try {
   await c.go(base + "/index.html");
   ok(c.logs.length === 0, "index: no console errors", c.logs.join(" | "));
   ok(c.failed.length === 0, "index: no failed requests", c.failed.join(" | "));
-  ok(await c.eval("document.querySelectorAll('a.warm.vocab').length") === 6,
-     "index: six vocabulary links");
+  ok(await c.eval("document.querySelectorAll('a.warm.vocab[href^=\"vocab-0\"]').length") === UNITS.length,
+     `index: one vocabulary link per unit (${UNITS.length})`);
+  ok(await c.eval("!!document.querySelector('a[href=\"vocab-review.html\"]')"),
+     "index: links the Units 1–7 sprint");
 
   /* --------------------------------------------- a full correct run */
   for (const u of UNITS) {
@@ -371,8 +287,7 @@ try {
 } catch (e) {
   ok(false, "page suite crashed", e.message);
 } finally {
-  chrome.kill();
-  server.kill();
+  stop();
 }
 
 const total = pass + fails.length;

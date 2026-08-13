@@ -13,25 +13,40 @@ answer entry, instant self-check with the answer-key explanations, and the
 tapescript behind a reveal.
 
 ```
-index.html            lesson index
-slides-NN.html        5-minute warm-up deck, run before the unit
-unit-NN.html          one lesson per unit
-vocab-NN.html         the unit's vocabulary game
-unit-02-file2.html    Student B role card for the Unit 2 pair work
-                      (unlinked on purpose — send the URL only to Student B)
-assets/slides.css     deck styling
-assets/slides.js      deck runner
-assets/lesson.css     lesson styling
-assets/lesson.js      shared marking engine
-assets/vocab.css      vocabulary game styling, layered on lesson.css
-assets/vocab.js       vocabulary game engine
-assets/words-NN.js    one word bank per unit
-img/uNN/              per-exercise crops rendered from the unit PDF at 220 dpi
-audio/uNN/            the unit's class-audio tracks
-tools/check-vocab.mjs word-bank and link checks
-tools/check-pages.mjs drives real Chrome through every vocabulary page
-tools/serve.js        static server for local testing
+index.html              lesson index
+slides-NN.html          5-minute warm-up deck, run before the unit
+slides-review.html      the deck for the checkpoint day
+unit-NN.html            one lesson per unit
+review-01.html          checkpoint across Parts 1–7, end of week 2
+vocab-NN.html           the unit's vocabulary game
+vocab-review.html       the same game over every word from Units 1–7
+unit-02-file2.html      Student B role card for the Unit 2 pair work
+                        (unlinked on purpose — send the URL only to Student B)
+assets/slides.css       deck styling
+assets/slides.js        deck runner
+assets/lesson.css       lesson styling
+assets/lesson.js        shared marking engine
+assets/vocab.css        vocabulary game styling, layered on lesson.css
+assets/vocab.js         vocabulary game engine
+assets/words-NN.js      one word bank per unit
+assets/words-review.js  folds the seven unit banks into one; holds no words itself
+img/uNN/                per-exercise crops rendered from the unit PDF at 220 dpi
+audio/uNN/              the unit's class-audio tracks
+tools/cdp.mjs           shared headless-Chrome harness for the two browser suites
+tools/check-vocab.mjs   word-bank and link checks
+tools/check-pages.mjs   drives real Chrome through every vocabulary page
+tools/check-lessons.mjs drives real Chrome through every lesson page and deck
+tools/serve.js          static server for local testing
 ```
+
+## The checkpoint day
+
+`review-01.html` closes week 2. It introduces nothing: section A asks for the
+seven tactics from memory, section B replays the Unit 1–4 recordings at full
+speed with their own questions, and section C is twenty Part 5/6/7 questions
+written for this class around the Units 1–7 vocabulary. Its answers live in the
+same `initLesson` key as every other page, so `check-lessons.mjs` marks it the
+same way.
 
 ## Warm-up decks
 
@@ -92,15 +107,29 @@ units needed extra adjectives and adverbs from the 600 book for this reason.
 ## Checks
 
 ```
-node tools/check-vocab.mjs    # banks, links, stated word counts
-node tools/check-pages.mjs    # real Chrome: plays every unit start to finish
+node tools/check-vocab.mjs      # banks, links, stated word counts
+node tools/check-pages.mjs      # real Chrome: plays every vocabulary game
+node tools/check-lessons.mjs    # real Chrome: marks every lesson page and deck
 ```
 
-The page suite plays a full correct run of all six units, a deliberately wrong
+The page suite plays a full correct run of all seven units, a deliberately wrong
 run to exercise the retry queue, four runs to confirm words actually reach
-mastered, the reset button, and a 390px overflow pass. It writes screenshots to
-`tools/shots/` — look at them. Assertions have passed on visibly broken pages
-here before.
+mastered, the reset button, and a 390px overflow pass.
+
+The lesson suite reads each page's answer key out of its own `initLesson` call,
+answers every item with the book's answer, presses each **Check** button and
+asserts the score came back full — then gets one group deliberately wrong and
+asserts the marking notices. A key with a typo in it still scores 100% if you
+only ever feed it its own answers, which is what that second pass is for. It
+also checks every image decoded, every image has alt text, every audio file is
+served, and every deck has one notes block per slide.
+
+Both write screenshots to `tools/shots/` — look at them. Assertions have passed
+on visibly broken pages here before.
+
+One trap worth knowing: most scans below the fold are `loading="lazy"`, so an
+image check that runs on page load reports a healthy page as broken. The suite
+forces `loading="eager"` and waits before it looks.
 
 Two things that will bite if you touch this: run width checks with
 `mobile:false` and assert `innerWidth` is what you asked for, otherwise Chrome

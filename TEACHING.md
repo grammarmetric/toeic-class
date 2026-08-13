@@ -60,12 +60,18 @@ interrupted, not read out.
 
 | Day | Deck |
 |---|---|
-| 1 | `slides-01.html` — 7 slides |
-| 2 | `slides-05.html` — 8 slides |
-| 3 | `slides-02.html` — 8 slides |
-| 4 | `slides-06.html` — 8 slides |
+| Week 1 · 1 | `slides-01.html` — 7 slides |
+| Week 1 · 2 | `slides-05.html` — 8 slides |
+| Week 1 · 3 | `slides-02.html` — 8 slides |
+| Week 1 · 4 | `slides-06.html` — 8 slides |
+| Week 2 · 1 | `slides-03.html` — 8 slides |
+| Week 2 · 2 | `slides-07.html` — 8 slides |
+| Week 2 · 3 | `slides-04.html` — 8 slides |
+| Week 2 · 4 | `slides-review.html` — 8 slides |
 
 ---
+
+# WEEK 1
 
 # Day 1 · Unit 1 — Listening Part 1: Photographs
 
@@ -186,6 +192,134 @@ A double-length unit — eight book pages. **Section C is your overflow.**
 
 **Watch for:** on a phone the letters are small. Tell them to pinch-zoom the
 text, then scroll down to the A/B/C/D buttons underneath.
+
+---
+
+# WEEK 2
+
+Week 2 finishes the first pass through all seven parts, and then checks what
+stuck. Days 1–3 are new units; Day 4 is a checkpoint built from what they have
+already been taught.
+
+# Day 1 · Unit 3 — Listening Part 3: Conversations
+
+`unit-03.html` · book pages 16–19 · audio 0:36 / 1:11 / **2:16** / 0:32 / **4:20**
+
+The first listening part where everything is printed. That is the lesson: the
+work moves to *before* the recording.
+
+| Time | Section | What you do |
+|---|---|---|
+| 0:00 | Settle | Homework from Week 1 Day 4: two students read out a text-completion gap they got wrong and why. |
+| 0:05 | ▶ **Warm-up deck** | `slides-03.html` — skim, predict, and the paraphrase problem. |
+| 0:12 | **A Focus** + Test tip | One line — the deck made the point. |
+| 0:14 | **1 Language building** | Match statements 1–4 with a–d. → **Check 1–4** |
+| 0:24 | *Follow up* | ▶ (0:36). Three more statements, match with e–g. → **Check 5–7**. Then open the *Tapescript*. |
+| 0:32 | **2 Test tactic A** | They read the three questions and predict **who / where / what about** — in pairs, out loud, in the box. Open *Possible answers*. |
+| 0:42 | **2 Test tactic B** | ▶ (1:11). → **Check questions 1–3**. The feedback names the line that decided it. |
+| **0:52** | **Break — 8 min** | |
+| 1:00 | **3 Tactic practice** | Give them one minute per conversation to predict, *then* ▶ (2:16). → **Check questions 1–6** |
+| 1:15 | Tactics checklist | Read it together before the mini-test. |
+| 1:18 | **Understanding natural English** | ▶ (0:32). *Do you think you could* — the whole phrase blurs into three syllables. → **Check** |
+| 1:26 | **B Mini-test** | Exam conditions: one play, **4:20** straight through, four conversations. No pausing. |
+| 1:32 | Mark it | → **Check my answers**. Go through every wrong one — the page gives the book's reason for all four choices. |
+| 1:46 | **C Learn by doing** | The two request conversations → **Check both conversations**. Then the four situations, in pairs. |
+| 1:56 | *Follow up* | They write one conversation plus three Part 3 questions, and test another pair. |
+| 1:59 | **D Further study** | Homework: their own request conversation and three questions. |
+
+**Watch for:** *Would you mind* + **-ing** against *Do you think I could* +
+plain verb. They will mix these two up in section C — it is worth stopping for.
+
+---
+
+# Day 2 · Unit 7 — Reading Part 7: Reading Comprehension
+
+`unit-07.html` · book pages 36–44 · no audio · one 12-minute timer
+
+**Nine book pages — the longest unit so far.** Section C is your overflow;
+everything up to the mini-test is the part that must not be rushed.
+
+| Time | Section | What you do |
+|---|---|---|
+| 0:00 | Settle | Day 1 homework: one pair performs their request conversation, the class answers their three questions. |
+| 0:06 | ▶ **Warm-up deck** | `slides-07.html` — *do not read the passage*. Let them argue with it. |
+| 0:13 | **A Focus** + two Test tips | The four question types and the order 1–2–3–4. This is the unit's whole content. |
+| 0:18 | **1 Test tactic** | Mark the type of five questions (the first is done). → **Check the question types** |
+| 0:30 | **2 Test tactic A** | Which of the seven are specific information questions? Tap them. → **Check my choices** |
+| 0:38 | **2 Test tactic B** | Key words first, *then* the refund-policy passage. → **Check questions 1–2** |
+| **0:50** | **Break — 8 min** | |
+| 0:58 | **3 Tactic practice** | Questions **before** the letter — make them cover the passage with a hand. → **Check questions 1–3** |
+| 1:10 | **B Mini-test** | ⏱ Start the **12:00** timer. Four texts, twelve questions, about 60 seconds each. |
+| 1:24 | Mark it | → **Check my answers**. For each one ask: which question type was it, and did they do it in the right order? |
+| 1:40 | **C Reading in action** | They are the branch manager. Four questions on the notice → **Check questions 1–4**. Loose wording is accepted. |
+| 1:50 | The reply | Discuss what Mr Hong should do, then complete the seven gaps → **Check the reply** |
+| 1:58 | **D Further study** | Homework: a short report on how they handled it. |
+
+**Watch for:** they will read the passage first out of habit — every one of
+them, on the first exercise. Catch it there rather than in the mini-test.
+
+---
+
+# Day 3 · Unit 4 — Listening Part 4: Talks
+
+`unit-04.html` · book pages 20–23 · audio 1:38 / **3:02** / 0:32 / **6:10**
+
+The last new listening part, and the longest mini-test of the fortnight.
+
+| Time | Section | What you do |
+|---|---|---|
+| 0:00 | Settle | Day 2 homework: two students read their shipping reports. |
+| 0:05 | ▶ **Warm-up deck** | `slides-04.html` — one voice, answers in order, answer early. |
+| 0:12 | **1 Language building** | The ferry announcement: four paraphrases to match (the first is done). → **Check the matches** |
+| 0:22 | **2 Test tactic A** | Key words in questions 1–3, then predict which of situations A–C. → **Check my prediction** |
+| 0:32 | **2 Test tactic B** | ▶ (1:38). → **Check questions 1–3** |
+| 0:42 | **3 Tactic practice** | One minute to predict, then ▶ (3:02) for both talks. → **Check questions 1–6** |
+| **0:55** | **Break — 8 min** | |
+| 1:03 | Tactics checklist | Read it, then the natural-English box. |
+| 1:06 | **Understanding natural English** | ▶ (0:32). *for any* → *frenny*. → **Check** |
+| 1:12 | **B Mini-test** | Exam conditions: **6:10**, one play, four talks. The longest single listening they have done. |
+| 1:20 | Mark it | → **Check my answers**. Ask who answered before the voice read the questions — that is the habit being tested. |
+| 1:38 | **C Learn by doing** | Match the four announcement halves → **Check the announcement**. Then read it aloud in pairs. |
+| 1:48 | *Follow up* | Three sets of notes → three announcements, taking turns. Open *Possible answers* only after they have tried. |
+| 1:58 | **D Further study** | Homework: prepare an announcement of their own to deliver on Day 4. |
+
+**Watch for:** 6:10 is a long time to concentrate. Warn them before you press
+play, and do not stop it — stopping teaches the wrong lesson.
+
+---
+
+# Day 4 · Checkpoint — Parts 1–7
+
+`review-01.html` · no new book pages · audio 3:24 / 3:48 / 2:16 / 3:02 · one 20-minute timer
+
+Nothing new. Sections A and B are things they have already been taught; section
+C is twenty questions they have never seen, written for this class.
+
+**Before class:** ask them to close the unit pages. Section A is from memory and
+the answers are three taps away on `unit-03.html` and friends.
+
+| Time | Section | What you do |
+|---|---|---|
+| 0:00 | Settle | Day 3 homework: each student delivers their announcement. Two minutes each. |
+| 0:10 | ▶ **Warm-up deck** | `slides-review.html` — the seven tactics on one screen, then the two habits underneath them. |
+| 0:17 | **A The seven tactics** | From memory, no notes. → **Check the seven tactics**. Go through any they miss — that is your reteaching list. |
+| 0:30 | **B Part 1** | ▶ (3:24), eight photographs. One play. → **Check Part 1** |
+| 0:40 | **B Part 2** | ▶ (3:48), twelve questions, nothing printed. → **Check Part 2** |
+| **0:52** | **Break — 8 min** | |
+| 1:00 | **B Part 3** | ▶ (2:16), two conversations. → **Check Part 3** |
+| 1:08 | **B Part 4** | ▶ (3:02), two talks. → **Check Part 4** |
+| 1:18 | **C Reading** | ⏱ Start the **20:00** timer. Parts 5, 6 and 7 straight through — no stopping between parts. |
+| 1:40 | Mark it | → **Check Part 5**, **Part 6**, **Part 7**. Ask them to write down which part scored worst. |
+| 1:52 | **D Vocabulary sprint** | All 201 words from both weeks. Five minutes on their own phones. |
+| 1:58 | Wrap | Tell them what next week starts with — pick it from what section A exposed. |
+
+**Watch for:** section B uses recordings they met a week ago. Some will say
+they remember the answers. Two things to say: remembering four of thirty-two is
+not the same as remembering thirty-two, and the score still tells you whether
+the *tactic* survived — which is what today is measuring.
+
+**A part below half is the plan for next week,** not a failure. Say so out loud
+before they mark, not after.
 
 ---
 

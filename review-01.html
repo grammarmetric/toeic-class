@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Checkpoint — Parts 1–7 | Tactics for TOEIC</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2300060e'/%3E%3Ctext x='16' y='23' font-family='Segoe UI,Arial' font-size='19' font-weight='700' fill='%2354c1e6' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/lesson.css">
+<style>
+  /* The checkpoint spans both halves of the test, so it takes a colour of its own
+     rather than borrowing the listening red or the reading blue. */
+  body{ --accent:#6a3fa0 }
+  .part-h{display:flex;align-items:baseline;gap:10px;margin:26px 0 12px;
+          border-top:1px solid var(--line);padding-top:18px}
+  .part-h:first-of-type{border-top:0;padding-top:0;margin-top:14px}
+  .part-h .n{flex:0 0 auto;background:var(--accent);color:#fff;border-radius:7px;
+             padding:3px 10px;font-size:12.5px;font-weight:700;letter-spacing:.04em}
+  .part-h h3{margin:0;font-size:17px}
+  .part-h .sub{color:var(--dim);font-size:13.5px}
+  .stem{font-size:16px;margin:0 0 10px;line-height:1.5}
+  .stem .g{display:inline-block;min-width:92px;border-bottom:2px solid #a9b6c6;
+           text-align:center;color:var(--dim);font-weight:600}
+  .passage{border:1px solid var(--line);border-radius:11px;background:#fff;
+           padding:16px 18px;margin:0 0 16px;font-size:15px;line-height:1.6}
+  .passage h4{margin:0 0 4px;font-size:16.5px}
+  .passage .head{color:var(--dim);font-size:13px;margin:0 0 12px}
+  .passage ul{margin:.5em 0;padding-left:1.2em}
+  .passage li{margin:.25em 0}
+  .passage .rule{border:0;border-top:1px solid var(--line);margin:14px 0}
+  .passage .small{font-size:13.5px;color:var(--dim)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="home" href="index.html">← Lessons</a>
+  <h1>Checkpoint · Parts 1–7<span>Everything from Units 1–7 · Listening then Reading</span></h1>
+  <button class="reset" id="resetBtn" type="button">Clear my answers</button>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= A · THE SEVEN TACTICS ================= -->
+  <section class="sec">
+    <div class="sec-h"><div class="badge">A</div><h2>The seven tactics</h2></div>
+    <p class="note" style="margin-top:8px">One question per part. No listening, no reading — just: do you
+    remember the tactic? Answer from memory before you look anything up.</p>
+
+    <div class="item" id="tac1" data-group="tac"><div class="item-h">Part 1 · Photographs</div>
+      <p class="stem">What should you do while you are looking at the photograph, before the statements begin?</p>
+      <div class="opts" data-mcq="tac1" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> Read all four statements first.</li>
+        <li><span class="c">B</span> Predict the nouns and verbs you might hear.</li>
+        <li><span class="c">C</span> Choose the statement that repeats a word you can see.</li>
+        <li><span class="c">D</span> Wait until all four statements have finished before deciding.</li>
+      </ul>
+      <div class="fb" id="fb-tac1"></div></div>
+
+    <div class="item" id="tac2" data-group="tac"><div class="item-h">Part 2 · Question–Response</div>
+      <p class="stem">What is the tactic for choosing between the three responses?</p>
+      <div class="opts" data-mcq="tac2" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> Listen for the key words and focus on meaning.</li>
+        <li><span class="c">B</span> Choose the response that uses the same words as the question.</li>
+        <li><span class="c">C</span> Answer only when the response begins with <em>Yes</em> or <em>No</em>.</li>
+        <li><span class="c">D</span> Match the tense of the response to the tense of the question.</li>
+      </ul>
+      <div class="fb" id="fb-tac2"></div></div>
+
+    <div class="item" id="tac3" data-group="tac"><div class="item-h">Part 3 · Conversations</div>
+      <p class="stem">What should you do with the time before each conversation starts?</p>
+      <div class="opts" data-mcq="tac3" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> Nothing — save your concentration for the recording.</li>
+        <li><span class="c">B</span> Skim the questions and answer choices to predict the context.</li>
+        <li><span class="c">C</span> Write down everything the speakers say.</li>
+        <li><span class="c">D</span> Decide your answers after the conversation has finished.</li>
+      </ul>
+      <div class="fb" id="fb-tac3"></div></div>
+
+    <div class="item" id="tac4" data-group="tac"><div class="item-h">Part 4 · Talks</div>
+      <p class="stem">When should you mark your answer?</p>
+      <div class="opts" data-mcq="tac4" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> When the voice tells you to.</li>
+        <li><span class="c">B</span> As soon as you hear the answer, then read ahead.</li>
+        <li><span class="c">C</span> Only after you have heard a number or a date.</li>
+        <li><span class="c">D</span> At the end, all three questions together.</li>
+      </ul>
+      <div class="fb" id="fb-tac4"></div></div>
+
+    <div class="item" id="tac5" data-group="tac"><div class="item-h">Part 5 · Incomplete Sentences</div>
+      <p class="stem">What should you decide before you look closely at the four options?</p>
+      <div class="opts" data-mcq="tac5" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> Which option is the longest word.</li>
+        <li><span class="c">B</span> What the whole sentence means in your own language.</li>
+        <li><span class="c">C</span> Which part of speech fits the gap — then use the 2-pass method.</li>
+        <li><span class="c">D</span> Whether the sentence is formal or informal.</li>
+      </ul>
+      <div class="fb" id="fb-tac5"></div></div>
+
+    <div class="item" id="tac6" data-group="tac"><div class="item-h">Part 6 · Text Completion</div>
+      <p class="stem">Where do you find the information that tells you which tense to use?</p>
+      <div class="opts" data-mcq="tac6" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> In the sentence containing the gap only.</li>
+        <li><span class="c">B</span> In the context around the gap, especially time expressions.</li>
+        <li><span class="c">C</span> In the previous sentence — always use the same tense.</li>
+        <li><span class="c">D</span> In the title of the text.</li>
+      </ul>
+      <div class="fb" id="fb-tac6"></div></div>
+
+    <div class="item" id="tac7" data-group="tac"><div class="item-h">Part 7 · Reading Comprehension</div>
+      <p class="stem">What do you do first, and which questions do you answer first?</p>
+      <div class="opts" data-mcq="tac7" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> Read the whole passage carefully, then answer in order.</li>
+        <li><span class="c">B</span> Answer the questions in the order they are printed.</li>
+        <li><span class="c">C</span> Look at the questions first, and do the specific information ones first.</li>
+        <li><span class="c">D</span> Do the <em>NOT true</em> questions first while you are fresh.</li>
+      </ul>
+      <div class="fb" id="fb-tac7"></div></div>
+
+    <div class="row">
+      <button class="btn" type="button" data-check="tac">Check the seven tactics</button>
+      <button class="btn ghost sm" type="button" data-clearmark="tac">Try again</button>
+      <span class="score" id="score-tac"></span>
+    </div>
+  </section>
+
+  <!-- ================= B · LISTENING CHECKPOINT ================= -->
+  <section class="sec">
+    <div class="sec-h"><div class="badge">B</div><h2>Listening checkpoint</h2></div>
+    <p class="note" style="margin-top:8px">You have met these recordings before — that is the point. A week
+    later, at full speed, with no help: how many can you get now? One play each.</p>
+
+    <!-- Part 1 -->
+    <div class="part-h"><div class="n">PART 1</div><h3>Photographs</h3><div class="sub">8 questions</div></div>
+    <div class="audio" data-src="audio/u01/t5-mini-test.mp3" data-title="Part 1 — eight photographs (from Unit 1)"></div>
+
+    <div class="item" id="p1q1" data-group="p1">
+      <div class="item-h">Question 1</div>
+      <div class="photo"><img src="img/u01/mt-q1.jpg" alt="Two people carrying a Christmas tree through the snow with a dog."></div>
+      <div class="opts" data-mcq="p1q1" data-letters="A,B,C,D"></div><div class="fb" id="fb-p1q1"></div></div>
+    <div class="item" id="p1q2" data-group="p1">
+      <div class="item-h">Question 2</div>
+      <div class="photo"><img src="img/u01/mt-q2.jpg" alt="A man on a boat pouring a drink from a flask."></div>
+      <div class="opts" data-mcq="p1q2" data-letters="A,B,C,D"></div><div class="fb" id="fb-p1q2"></div></div>
+    <div class="item" id="p1q3" data-group="p1">
+      <div class="item-h">Question 3</div>
+      <div class="photo"><img src="img/u01/mt-q3.jpg" alt="A woman looking at sunflowers at a market stall."></div>
+      <div class="opts" data-mcq="p1q3" data-letters="A,B,C,D"></div><div class="fb" id="fb-p1q3"></div></div>
+    <div class="item" id="p1q4" data-group="p1">
+      <div class="item-h">Question 4</div>
+      <div class="photo"><img src="img/u01/mt-q4.jpg" alt="A man kneeling outdoors repairing a lawnmower."></div>
+      <div class="opts" data-mcq="p1q4" data-letters="A,B,C,D"></div><div class="fb" id="fb-p1q4"></div></div>
+    <div class="item" id="p1q5" data-group="p1">
+      <div class="item-h">Question 5</div>
+      <div class="photo"><img src="img/u01/mt-q5.jpg" alt="A man looking out through a large window."></div>
+      <div class="opts" data-mcq="p1q5" data-letters="A,B,C,D"></div><div class="fb" id="fb-p1q5"></div></div>
+    <div class="item" id="p1q6" data-group="p1">
+      <div class="item-h">Question 6</div>
+      <div class="photo"><img src="img/u01/mt-q6.jpg" alt="People sitting at tables in a restaurant."></div>
+      <div class="opts" data-mcq="p1q6" data-letters="A,B,C,D"></div><div class="fb" id="fb-p1q6"></div></div>
+    <div class="item" id="p1q7" data-group="p1">
+      <div class="item-h">Question 7</div>
+      <div class="photo"><img src="img/u01/mt-q7.jpg" alt="A man working at a bench in a workshop full of tools."></div>
+      <div class="opts" data-mcq="p1q7" data-letters="A,B,C,D"></div><div class="fb" id="fb-p1q7"></div></div>
+    <div class="item" id="p1q8" data-group="p1">
+      <div class="item-h">Question 8</div>
+      <div class="photo"><img src="img/u01/mt-q8.jpg" alt="A man in a suit standing at the roadside with his arm raised."></div>
+      <div class="opts" data-mcq="p1q8" data-letters="A,B,C,D"></div><div class="fb" id="fb-p1q8"></div></div>
+    <div class="row">
+      <button class="btn" type="button" data-check="p1">Check Part 1</button>
+      <button class="btn ghost sm" type="button" data-clearmark="p1">Try again</button>
+      <span class="score" id="score-p1"></span>
+    </div>
+
+    <!-- Part 2 -->
+    <div class="part-h"><div class="n">PART 2</div><h3>Question–Response</h3><div class="sub">12 questions · nothing is printed</div></div>
+    <div class="audio" data-src="audio/u02/t4-mini-test.mp3" data-title="Part 2 — twelve questions (from Unit 2)"></div>
+    <div class="item" id="p2q1" data-group="p2"><div class="item-h">Question 1</div>
+      <div class="opts" data-mcq="p2q1" data-letters="A,B,C"></div><div class="fb" id="fb-p2q1"></div></div>
+    <div class="item" id="p2q2" data-group="p2"><div class="item-h">Question 2</div>
+      <div class="opts" data-mcq="p2q2" data-letters="A,B,C"></div><div class="fb" id="fb-p2q2"></div></div>
+    <div class="item" id="p2q3" data-group="p2"><div class="item-h">Question 3</div>
+      <div class="opts" data-mcq="p2q3" data-letters="A,B,C"></div><div class="fb" id="fb-p2q3"></div></div>
+    <div class="item" id="p2q4" data-group="p2"><div class="item-h">Question 4</div>
+      <div class="opts" data-mcq="p2q4" data-letters="A,B,C"></div><div class="fb" id="fb-p2q4"></div></div>
+    <div class="item" id="p2q5" data-group="p2"><div class="item-h">Question 5</div>
+      <div class="opts" data-mcq="p2q5" data-letters="A,B,C"></div><div class="fb" id="fb-p2q5"></div></div>
+    <div class="item" id="p2q6" data-group="p2"><div class="item-h">Question 6</div>
+      <div class="opts" data-mcq="p2q6" data-letters="A,B,C"></div><div class="fb" id="fb-p2q6"></div></div>
+    <div class="item" id="p2q7" data-group="p2"><div class="item-h">Question 7</div>
+      <div class="opts" data-mcq="p2q7" data-letters="A,B,C"></div><div class="fb" id="fb-p2q7"></div></div>
+    <div class="item" id="p2q8" data-group="p2"><div class="item-h">Question 8</div>
+      <div class="opts" data-mcq="p2q8" data-letters="A,B,C"></div><div class="fb" id="fb-p2q8"></div></div>
+    <div class="item" id="p2q9" data-group="p2"><div class="item-h">Question 9</div>
+      <div class="opts" data-mcq="p2q9" data-letters="A,B,C"></div><div class="fb" id="fb-p2q9"></div></div>
+    <div class="item" id="p2q10" data-group="p2"><div class="item-h">Question 10</div>
+      <div class="opts" data-mcq="p2q10" data-letters="A,B,C"></div><div class="fb" id="fb-p2q10"></div></div>
+    <div class="item" id="p2q11" data-group="p2"><div class="item-h">Question 11</div>
+      <div class="opts" data-mcq="p2q11" data-letters="A,B,C"></div><div class="fb" id="fb-p2q11"></div></div>
+    <div class="item" id="p2q12" data-group="p2"><div class="item-h">Question 12</div>
+      <div class="opts" data-mcq="p2q12" data-letters="A,B,C"></div><div class="fb" id="fb-p2q12"></div></div>
+    <div class="row">
+      <button class="btn" type="button" data-check="p2">Check Part 2</button>
+      <button class="btn ghost sm" type="button" data-clearmark="p2">Try again</button>
+      <span class="score" id="score-p2"></span>
+    </div>
+
+    <!-- Part 3 -->
+    <div class="part-h"><div class="n">PART 3</div><h3>Conversations</h3><div class="sub">6 questions · two conversations</div></div>
+    <div class="audio" data-src="audio/u03/t3-tactic-practice.mp3" data-title="Part 3 — two conversations (from Unit 3)"></div>
+    <div class="item" id="p3q1" data-group="p3">
+      <figure class="q-scan"><img src="img/u03/tp-q1.jpg" alt="1. What are the speakers discussing? (A) The weather in Taylorville (B) A meeting with clients (C) The fee for some repairs (D) A visit to a branch office"></figure>
+      <div class="opts" data-mcq="p3q1" data-letters="A,B,C,D"></div><div class="fb" id="fb-p3q1"></div></div>
+    <div class="item" id="p3q2" data-group="p3">
+      <figure class="q-scan"><img src="img/u03/tp-q2.jpg" alt="2. What is the problem? (A) The head office air conditioner is broken. (B) Bill cannot do the job. (C) Karl is busy all next week. (D) The Taylorville office is closed."></figure>
+      <div class="opts" data-mcq="p3q2" data-letters="A,B,C,D"></div><div class="fb" id="fb-p3q2"></div></div>
+    <div class="item" id="p3q3" data-group="p3">
+      <figure class="q-scan"><img src="img/u03/tp-q3.jpg" alt="3. What does the man suggest? (A) Going to the head office on Tuesday (B) Changing the air conditioning unit (C) Asking someone else to do the job (D) Delaying the trip to Taylorville"></figure>
+      <div class="opts" data-mcq="p3q3" data-letters="A,B,C,D"></div><div class="fb" id="fb-p3q3"></div></div>
+    <div class="item" id="p3q4" data-group="p3">
+      <figure class="q-scan"><img src="img/u03/tp-q4.jpg" alt="4. How does the man feel about their new training program? (A) It is not as good as the old one. (B) It is an improvement on their previous one. (C) It does not have any practical value. (D) It is full of useful ideas."></figure>
+      <div class="opts" data-mcq="p3q4" data-letters="A,B,C,D"></div><div class="fb" id="fb-p3q4"></div></div>
+    <div class="item" id="p3q5" data-group="p3">
+      <figure class="q-scan"><img src="img/u03/tp-q5.jpg" alt="5. What did the woman ask the man about? (A) How many trainees attended (B) A package she needs (C) The trainees' practical skills (D) Comments from the participants"></figure>
+      <div class="opts" data-mcq="p3q5" data-letters="A,B,C,D"></div><div class="fb" id="fb-p3q5"></div></div>
+    <div class="item" id="p3q6" data-group="p3">
+      <figure class="q-scan"><img src="img/u03/tp-q6.jpg" alt="6. What did some trainees criticize? (A) There were too many ideas. (B) There was no opportunity for feedback. (C) The training was too theoretical. (D) It was hard to say anything in the session."></figure>
+      <div class="opts" data-mcq="p3q6" data-letters="A,B,C,D"></div><div class="fb" id="fb-p3q6"></div></div>
+    <div class="row">
+      <button class="btn" type="button" data-check="p3">Check Part 3</button>
+      <button class="btn ghost sm" type="button" data-clearmark="p3">Try again</button>
+      <span class="score" id="score-p3"></span>
+    </div>
+
+    <!-- Part 4 -->
+    <div class="part-h"><div class="n">PART 4</div><h3>Talks</h3><div class="sub">6 questions · two talks</div></div>
+    <div class="audio" data-src="audio/u04/t2-tactic-practice.mp3" data-title="Part 4 — two talks (from Unit 4)"></div>
+    <div class="item" id="p4q1" data-group="p4">
+      <figure class="q-scan"><img src="img/u04/tp-q1.jpg" alt="1. What is the main purpose of this announcement? (A) To discuss the history of Arabella (B) To outline ways to get to Arabella (C) To make Arabella sound attractive to visitors (D) To describe Arabella's local music"></figure>
+      <div class="opts" data-mcq="p4q1" data-letters="A,B,C,D"></div><div class="fb" id="fb-p4q1"></div></div>
+    <div class="item" id="p4q2" data-group="p4">
+      <figure class="q-scan"><img src="img/u04/tp-q2.jpg" alt="2. What was Arabella originally? (A) A cultural center (B) A center for sailing events (C) A resort island (D) A trading center"></figure>
+      <div class="opts" data-mcq="p4q2" data-letters="A,B,C,D"></div><div class="fb" id="fb-p4q2"></div></div>
+    <div class="item" id="p4q3" data-group="p4">
+      <figure class="q-scan"><img src="img/u04/tp-q3.jpg" alt="3. When is the Caribbean Carnival held? (A) In mid-October (B) During the winter holidays (C) During the March break (D) At the end of April"></figure>
+      <div class="opts" data-mcq="p4q3" data-letters="A,B,C,D"></div><div class="fb" id="fb-p4q3"></div></div>
+    <div class="item" id="p4q4" data-group="p4">
+      <figure class="q-scan"><img src="img/u04/tp-q4.jpg" alt="4. Why was the meeting called? (A) To announce a schedule change (B) To move the deadline (C) To discuss the image files (D) To answer any questions"></figure>
+      <div class="opts" data-mcq="p4q4" data-letters="A,B,C,D"></div><div class="fb" id="fb-p4q4"></div></div>
+    <div class="item" id="p4q5" data-group="p4">
+      <figure class="q-scan"><img src="img/u04/tp-q5.jpg" alt="5. When does the project have to be finished? (A) By tomorrow (B) By Thursday (C) In five days (D) In a week"></figure>
+      <div class="opts" data-mcq="p4q5" data-letters="A,B,C,D"></div><div class="fb" id="fb-p4q5"></div></div>
+    <div class="item" id="p4q6" data-group="p4">
+      <figure class="q-scan"><img src="img/u04/tp-q6.jpg" alt="6. What are Beth and Howard asked to do? (A) Finalize the image files (B) Check for typos (C) Ask questions (D) Write the address labels"></figure>
+      <div class="opts" data-mcq="p4q6" data-letters="A,B,C,D"></div><div class="fb" id="fb-p4q6"></div></div>
+    <div class="row">
+      <button class="btn" type="button" data-check="p4">Check Part 4</button>
+      <button class="btn ghost sm" type="button" data-clearmark="p4">Try again</button>
+      <span class="score" id="score-p4"></span>
+    </div>
+  </section>
+
+  <!-- ================= C · READING CHECKPOINT ================= -->
+  <section class="sec">
+    <div class="sec-h"><div class="badge">C</div><h2>Reading checkpoint</h2></div>
+    <p class="note" style="margin-top:8px">Twenty questions you have never seen, written around the
+    vocabulary from Units 1–7. Start the clock and work straight through Parts 5, 6 and 7.</p>
+    <div class="timer" data-seconds="1200" data-label="Twenty minutes for Parts 5, 6 and 7 together."></div>
+
+    <!-- Part 5 -->
+    <div class="part-h"><div class="n">PART 5</div><h3>Incomplete Sentences</h3><div class="sub">10 questions</div></div>
+
+    <div class="item" id="r1" data-group="r5">
+      <p class="stem">1. All withdrawal requests must be submitted in <span class="g">&nbsp;</span> before the second class.</p>
+      <div class="opts" data-mcq="r1" data-letters="write,writing,written,writer"></div><div class="fb" id="fb-r1"></div></div>
+    <div class="item" id="r2" data-group="r5">
+      <p class="stem">2. The ferry service was interrupted, so ticket holders were offered an <span class="g">&nbsp;</span> refund.</p>
+      <div class="opts" data-mcq="r2" data-letters="immediate,immediately,immediacy,immediateness"></div><div class="fb" id="fb-r2"></div></div>
+    <div class="item" id="r3" data-group="r5">
+      <p class="stem">3. Complimentary beverages will be <span class="g">&nbsp;</span> while passengers wait for the shuttle.</p>
+      <div class="opts" data-mcq="r3" data-letters="serve,served,serving,service"></div><div class="fb" id="fb-r3"></div></div>
+    <div class="item" id="r4" data-group="r5">
+      <p class="stem">4. Sea Star Shipping is not <span class="g">&nbsp;</span> for costs that result from bad weather.</p>
+      <div class="opts" data-mcq="r4" data-letters="responsible,responsibly,responsibility,response"></div><div class="fb" id="fb-r4"></div></div>
+    <div class="item" id="r5" data-group="r5">
+      <p class="stem">5. Please note that advising an instructor does not <span class="g">&nbsp;</span> a notice of withdrawal.</p>
+      <div class="opts" data-mcq="r5" data-letters="constitute,constitution,constituting,constitutional"></div><div class="fb" id="fb-r5"></div></div>
+    <div class="item" id="r6" data-group="r5">
+      <p class="stem">6. Our technicians <span class="g">&nbsp;</span> on the network since the virus was discovered yesterday.</p>
+      <div class="opts" data-mcq="r6" data-letters="work,worked,have been working,will work"></div><div class="fb" id="fb-r6"></div></div>
+    <div class="item" id="r7" data-group="r5">
+      <p class="stem">7. If you <span class="g">&nbsp;</span> your account number, please call the Information Section.</p>
+      <div class="opts" data-mcq="r7" data-letters="do not know,did not know,will not know,have not known"></div><div class="fb" id="fb-r7"></div></div>
+    <div class="item" id="r8" data-group="r5">
+      <p class="stem">8. The EL301 was <span class="g">&nbsp;</span> popular with new college students.</p>
+      <div class="opts" data-mcq="r8" data-letters="exception,exceptional,exceptionally,exceptions"></div><div class="fb" id="fb-r8"></div></div>
+    <div class="item" id="r9" data-group="r5">
+      <p class="stem">9. Library cards are available for <span class="g">&nbsp;</span> at the branch you have nominated.</p>
+      <div class="opts" data-mcq="r9" data-letters="collect,collected,collecting,collection"></div><div class="fb" id="fb-r9"></div></div>
+    <div class="item" id="r10" data-group="r5">
+      <p class="stem">10. The sales meeting <span class="g">&nbsp;</span> to room 401, so please go there instead.</p>
+      <div class="opts" data-mcq="r10" data-letters="has moved,has been moved,is moving,moves"></div><div class="fb" id="fb-r10"></div></div>
+    <div class="row">
+      <button class="btn" type="button" data-check="r5">Check Part 5</button>
+      <button class="btn ghost sm" type="button" data-clearmark="r5">Try again</button>
+      <span class="score" id="score-r5"></span>
+    </div>
+
+    <!-- Part 6 -->
+    <div class="part-h"><div class="n">PART 6</div><h3>Text Completion</h3><div class="sub">4 questions · one memo</div></div>
+    <div class="passage">
+      <h4>Memo</h4>
+      <p class="head">To: All staff &nbsp;·&nbsp; From: Facilities &nbsp;·&nbsp; Subject: Car park closure</p>
+      <p>Please be advised that the staff car park <span class="c">(11) ………</span> for resurfacing from
+      Monday 18 August. The work <span class="c">(12) ………</span> about two weeks.</p>
+      <p>During this period, staff may use the Notting Drive lot, <span class="c">(13) ………</span> is a
+      five-minute walk from the main entrance. Please allow extra time in the morning.</p>
+      <p>We <span class="c">(14) ………</span> for any inconvenience and thank you for your patience.</p>
+    </div>
+
+    <div class="item" id="r11" data-group="r6"><div class="item-h">Gap 11</div>
+      <div class="opts" data-mcq="r11" data-letters="closes,will be closed,was closed,has closed"></div><div class="fb" id="fb-r11"></div></div>
+    <div class="item" id="r12" data-group="r6"><div class="item-h">Gap 12</div>
+      <div class="opts" data-mcq="r12" data-letters="took,has taken,is expected to take,was taking"></div><div class="fb" id="fb-r12"></div></div>
+    <div class="item" id="r13" data-group="r6"><div class="item-h">Gap 13</div>
+      <div class="opts" data-mcq="r13" data-letters="which,where,what,who"></div><div class="fb" id="fb-r13"></div></div>
+    <div class="item" id="r14" data-group="r6"><div class="item-h">Gap 14</div>
+      <div class="opts" data-mcq="r14" data-letters="apologize,apologized,are apologizing,had apologized"></div><div class="fb" id="fb-r14"></div></div>
+    <div class="row">
+      <button class="btn" type="button" data-check="r6">Check Part 6</button>
+      <button class="btn ghost sm" type="button" data-clearmark="r6">Try again</button>
+      <span class="score" id="score-r6"></span>
+    </div>
+
+    <!-- Part 7 -->
+    <div class="part-h"><div class="n">PART 7</div><h3>Reading Comprehension</h3><div class="sub">6 questions · two texts</div></div>
+    <p class="note" style="margin:0 0 12px">Questions 15–18 refer to the following advertisement.</p>
+    <div class="passage">
+      <h4>Alansburg Community Center</h4>
+      <p class="head">Autumn program — registration now open</p>
+      <p>Classes begin the week of 15 September and run for ten weeks.</p>
+      <ul>
+        <li>Conversational Spanish — Tuesdays, 6:30–8:00 p.m. — $180</li>
+        <li>Digital Photography — Wednesdays, 7:00–9:00 p.m. — $220</li>
+        <li>Beginners’ Swimming — Saturdays, 9:00–10:00 a.m. — $150</li>
+        <li>Yoga for Beginners — Saturdays, 10:30–11:30 a.m. — $150</li>
+      </ul>
+      <p>Register in person at the main desk, by telephone on 555-2210, or through our website.
+      Payment must accompany registration; we accept cash, check and credit card.</p>
+      <p>Members of the center receive a 10% reduction on all class fees. Membership costs $40 per
+      year and also gives you unlimited use of the gym and pool.</p>
+      <hr class="rule">
+      <p class="small">Please note: withdrawal requests must be received before the second class.
+      Refunds for swimming classes will not be processed until all pool passes have been returned.</p>
+    </div>
+
+    <div class="item" id="r15" data-group="r7">
+      <p class="stem">15. What is the main purpose of this advertisement?</p>
+      <div class="opts" data-mcq="r15" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> To announce a change to the timetable</li>
+        <li><span class="c">B</span> To describe the center’s facilities</li>
+        <li><span class="c">C</span> To encourage people to sign up for classes</li>
+        <li><span class="c">D</span> To explain the refund policy</li>
+      </ul>
+      <div class="fb" id="fb-r15"></div></div>
+    <div class="item" id="r16" data-group="r7">
+      <p class="stem">16. How much would a member pay for the Digital Photography class?</p>
+      <div class="opts" data-mcq="r16" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> $150</li><li><span class="c">B</span> $180</li>
+        <li><span class="c">C</span> $198</li><li><span class="c">D</span> $220</li>
+      </ul>
+      <div class="fb" id="fb-r16"></div></div>
+    <div class="item" id="r17" data-group="r7">
+      <p class="stem">17. Which of the following is NOT a way to register?</p>
+      <div class="opts" data-mcq="r17" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> By telephone</li><li><span class="c">B</span> By e-mail</li>
+        <li><span class="c">C</span> In person</li><li><span class="c">D</span> Through the website</li>
+      </ul>
+      <div class="fb" id="fb-r17"></div></div>
+    <div class="item" id="r18" data-group="r7">
+      <p class="stem">18. What must swimming students do before a refund is issued?</p>
+      <div class="opts" data-mcq="r18" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> Attend the second class</li>
+        <li><span class="c">B</span> Return their pool passes</li>
+        <li><span class="c">C</span> Pay a membership fee</li>
+        <li><span class="c">D</span> Write to the main desk</li>
+      </ul>
+      <div class="fb" id="fb-r18"></div></div>
+
+    <p class="note" style="margin:22px 0 12px">Questions 19–20 refer to the following e-mail.</p>
+    <div class="passage">
+      <p class="head">To: k.oyelaran@alansburgcc.org &nbsp;·&nbsp; From: m.rogers@megaco.example
+        &nbsp;·&nbsp; Date: 2 September &nbsp;·&nbsp; Subject: Beginners’ Swimming</p>
+      <p>Dear Ms Oyelaran,</p>
+      <p>I registered for the Saturday Beginners’ Swimming class last week and paid by credit card.
+      I have since been told that I will be traveling for work throughout October, so I am afraid
+      I will miss at least four of the ten lessons.</p>
+      <p>Would it be possible to move my registration to the same class in the spring term? If that
+      cannot be arranged, I would like to withdraw before the second class, as your notice allows.</p>
+      <p>I look forward to your reply.</p>
+      <p>Regards,<br>Martha Rogers</p>
+    </div>
+
+    <div class="item" id="r19" data-group="r7">
+      <p class="stem">19. Why is Ms. Rogers writing?</p>
+      <div class="opts" data-mcq="r19" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> To complain about a class</li>
+        <li><span class="c">B</span> To ask about changing her registration</li>
+        <li><span class="c">C</span> To register for a class</li>
+        <li><span class="c">D</span> To request a membership card</li>
+      </ul>
+      <div class="fb" id="fb-r19"></div></div>
+    <div class="item" id="r20" data-group="r7">
+      <p class="stem">20. The word “allows” in paragraph 2, line 2, is closest in meaning to</p>
+      <div class="opts" data-mcq="r20" data-letters="A,B,C,D"></div>
+      <ul class="note" style="margin:8px 0 0;padding-left:1.2em">
+        <li><span class="c">A</span> permits</li><li><span class="c">B</span> admits</li>
+        <li><span class="c">C</span> provides</li><li><span class="c">D</span> accepts</li>
+      </ul>
+      <div class="fb" id="fb-r20"></div></div>
+
+    <div class="row">
+      <button class="btn" type="button" data-check="r7">Check Part 7</button>
+      <button class="btn ghost sm" type="button" data-clearmark="r7">Try again</button>
+      <span class="score" id="score-r7"></span>
+    </div>
+  </section>
+
+  <!-- ================= D · VOCABULARY ================= -->
+  <section class="sec">
+    <div class="sec-h"><div class="badge">◆</div><h2>Vocabulary sprint</h2></div>
+    <p class="note" style="margin-top:8px">Every word from Units 1–7 in one game — 201 of them, once
+    the handful that appear in two units have been counted once. It asks about your weakest words most
+    often, so a short run tells you exactly which unit’s vocabulary has not stuck.</p>
+    <div class="row"><a class="btn" href="vocab-review.html" style="text-decoration:none">Open the Units 1–7 sprint →</a></div>
+  </section>
+
+</main>
+
+<p class="foot">Your answers are saved in this browser only — nothing is sent anywhere. Using a different device or clearing your browser data will start you fresh.<br>
+Listening material from <em>Tactics for TOEIC Listening and Reading Test</em> (Oxford University Press), used for classroom study. The Part 5, 6 and 7 questions on this page were written for this class.</p>
+
+<script src="assets/lesson.js"></script>
+<script>
+initLesson({
+  store: "gm_toeic_class_rev01_v1",
+  key: {
+    /* --- A The seven tactics --- */
+    tac1:{a:"B", why:"Unit 1 — look at the photo and brainstorm the nouns and verbs first. Once the statements start there is no time to think."},
+    tac2:{a:"A", why:"Unit 2 — the focus in Part 2 is meaning. A response that repeats a word from the question is usually a distractor, not the answer."},
+    tac3:{a:"B", why:"Unit 3 — skim the questions and answer choices to predict who the speakers are, where they are, and what the conversation is about."},
+    tac4:{a:"B", why:"Unit 4 — answer as soon as you hear the answer, then use the 35–40 seconds before the next talk to read the next set of questions."},
+    tac5:{a:"C", why:"Unit 5 — decide the part of speech that fits the gap, then run the 2-pass method: quick answers first, skipped ones second."},
+    tac6:{a:"B", why:"Unit 6 — the gap sentence alone is rarely enough. Time expressions elsewhere in the text tell you the tense."},
+    tac7:{a:"C", why:"Unit 7 — questions before passage, and specific information (positive) questions first. Leave the <em>NOT true</em> questions till last."},
+
+    /* --- B Part 1 (Unit 1 mini-test) --- */
+    p1q1:{a:"C", script:{A:"The dog is running in front of the people.",B:"The people are picking up wood.",C:"The people are carrying a tree.",D:"The people are going outside."},
+      why:{A:"The dog is not <em>running</em>.",B:"They are not <em>picking up</em> anything from the ground.",C:"Correct. <em>They are carrying a tree.</em>",D:"They are not <em>going outside</em> — they are already outside."}},
+    p1q2:{a:"D", script:{A:"The man is making a copy.",B:"The man is folding a sail.",C:"The man is drinking from a cup.",D:"The man is pouring a drink."},
+      why:{A:"The man is not <em>making a copy</em>.",B:"The man is not <em>folding a sail</em>.",C:"He is not drinking from a cup — he is pouring.",D:"Correct. <em>The man is pouring a drink.</em>"}},
+    p1q3:{a:"A", script:{A:"She's looking at a flower.",B:"She's buying some vegetables.",C:"She's sitting on the floor.",D:"She's picking up a flower pot."},
+      why:{A:"Correct. <em>She is looking at a flower.</em>",B:"She is not <em>buying some vegetables</em>.",C:"She is standing, not <em>sitting on the floor</em>.",D:"She is not picking up a flower pot."}},
+    p1q4:{a:"B", script:{A:"He's standing near the bushes.",B:"He's repairing a machine.",C:"He's cutting down a branch.",D:"He's fixing his car."},
+      why:{A:"There are <em>bushes</em>, but he is kneeling, not <em>standing</em>.",B:"Correct. <em>He is repairing a lawnmower.</em>",C:"He is not <em>cutting down a branch</em>.",D:"He is fixing a lawnmower, not <em>his car</em>."}},
+    p1q5:{a:"B", script:{A:"The man is washing the glass.",B:"The man is gazing out the window.",C:"The man is holding onto the railing.",D:"The man is hanging a picture."},
+      why:{A:"He is looking out of the window, not <em>washing the glass</em>.",B:"Correct. <em>The man is gazing out the window.</em>",C:"There is no <em>railing</em>.",D:"He is not <em>hanging a picture</em>."}},
+    p1q6:{a:"D", script:{A:"Four people are waiting for the phone booth.",B:"The meal is on the table.",C:"They're putting on aprons.",D:"They're sitting in a restaurant."},
+      why:{A:"They are in a restaurant, not <em>waiting for the phone booth</em>.",B:"There is no food <em>on the table</em>.",C:"They are not <em>putting on aprons</em>.",D:"Correct. <em>They’re sitting in a restaurant.</em>"}},
+    p1q7:{a:"A", script:{A:"There are a lot of tools in the workshop.",B:"The man is sitting in the shop.",C:"The shelves in the room are empty.",D:"The man is opening the door."},
+      why:{A:"Correct. <em>There are a lot of tools in the workshop.</em>",B:"The man is not <em>sitting</em>.",C:"There are a lot of things on the shelves.",D:"The man is not <em>opening the door</em>."}},
+    p1q8:{a:"B", script:{A:"The man is waving his briefcase.",B:"The man is trying to get a taxi.",C:"The man is walking on the road.",D:"The man is signing his name."},
+      why:{A:"He is not <em>waving</em> his briefcase.",B:"Correct. <em>The man is trying to get a taxi.</em>",C:"He is standing, not <em>walking</em>.",D:"Confuses <em>signing</em> and <em>signalling</em>."}},
+
+    /* --- B Part 2 (Unit 2 mini-test) --- */
+    p2q1:{a:"C", script:{A:"Platform six.",B:"It's getting late.",C:"Around midnight."},
+      why:{A:"Answers a <em>where</em>, not a <em>when</em> question.",B:"Relates to time, but is not a logical response.",C:"Correct. <em>Around midnight.</em>"}},
+    p2q2:{a:"B", script:{A:"We're taking it with us.",B:"I'll probably go to Miami again.",C:"No, I don't think I'll do it."},
+      why:{A:"Not a logical response.",B:"Correct. <em>I’ll probably go to Miami again.</em>",C:"Does not answer a <em>what</em> question."}},
+    p2q3:{a:"B", script:{A:"No, on the bus.",B:"Yes, but not until 10:30.",C:"I saw that, too."},
+      why:{A:"Not a logical response.",B:"Correct. <em>Yes, but not until 10:30.</em>",C:"Not a logical response."}},
+    p2q4:{a:"C", script:{A:"I don't think so.",B:"Everyone did.",C:"Very well, thanks."},
+      why:{A:"Not a logical response.",B:"Repeats <em>did</em> but does not answer.",C:"Correct. <em>Very well, thanks!</em>"}},
+    p2q5:{a:"B", script:{A:"With Sally.",B:"I haven't decided yet.",C:"In about an hour."},
+      why:{A:"Answers <em>who with</em>, not <em>where</em>.",B:"Correct. <em>I haven’t decided yet.</em>",C:"Answers <em>when</em>, not <em>where</em>."}},
+    p2q6:{a:"C", script:{A:"No, he wasn't there.",B:"Yes, I have been really tired.",C:"He's been working overtime."},
+      why:{A:"Does not answer a <em>why</em> question.",B:"Repeats <em>tired</em> but does not answer.",C:"Correct. <em>He’s been working overtime.</em>"}},
+    p2q7:{a:"A", script:{A:"Yes, just one.",B:"I'd like one, too.",C:"It was very relaxing."},
+      why:{A:"Correct. <em>Yes, just one.</em>",B:"Not a logical response.",C:"Confuses <em>message</em> and <em>massage</em>."}},
+    p2q8:{a:"B", script:{A:"Yes, he works hard.",B:"I wanted more responsibility.",C:"At the end of April."},
+      why:{A:"Related subject, but does not answer.",B:"Correct. <em>I wanted more responsibility.</em>",C:"Does not answer a <em>why</em> question."}},
+    p2q9:{a:"A", script:{A:"Yes, it's in Jane's office.",B:"I know him quite well.",C:"No, this afternoon."},
+      why:{A:"Correct. <em>Yes, it’s in Jane’s office.</em>",B:"Repeats <em>know</em> but does not answer.",C:"Uses the same sound, <em>know</em> and <em>no</em>."}},
+    p2q10:{a:"C", script:{A:"I prefer lunch.",B:"I heard all about it.",C:"Very good Italian food."},
+      why:{A:"Related subject, but does not answer.",B:"Not a logical response.",C:"Correct. <em>Very good Italian food.</em>"}},
+    p2q11:{a:"A", script:{A:"Yes, she seems very nice.",B:"Yes, I agree.",C:"It's completely full."},
+      why:{A:"Correct. <em>Yes, she seems very nice.</em>",B:"Not a logical response.",C:"Not a logical response."}},
+    p2q12:{a:"B", script:{A:"A week at least.",B:"A lot more than they said at first.",C:"I hope so."},
+      why:{A:"Does not answer <em>how much?</em>",B:"Correct. <em>A lot more than they said at first.</em>",C:"Not a logical response."}},
+
+    /* --- B Part 3 (Unit 3 tactic practice) --- */
+    p3q1:{a:"D", why:"The woman asks Bill to <em>visit the Taylorville branch</em> — a visit to a branch office."},
+    p3q2:{a:"B", why:"Bill says <em>I’m going to be busy all next week</em>, so he cannot do the job."},
+    p3q3:{a:"C", why:"<em>Why don’t you ask Karl? He should be free next week.</em>"},
+    p3q4:{a:"B", why:"<em>It’s certainly better than the old one.</em>"},
+    p3q5:{a:"D", why:"<em>What kind of feedback did you get from the trainees?</em>"},
+    p3q6:{a:"C", why:"Some trainees felt the session <em>lacked enough practical value</em> — too theoretical."},
+
+    /* --- B Part 4 (Unit 4 tactic practice) --- */
+    p4q1:{a:"C", why:"The talk sells Arabella as <em>the perfect spot for a tropical getaway</em>."},
+    p4q2:{a:"D", why:"<em>Arabella was established as a major Caribbean trading base.</em>"},
+    p4q3:{a:"A", why:"<em>The Caribbean Carnival … held in mid October.</em> The end of April is the sailing championships."},
+    p4q4:{a:"A", why:"<em>The deadline for the Q-com project has been changed.</em>"},
+    p4q5:{a:"C", why:"<em>We now have only five days left to get everything prepared.</em>"},
+    p4q6:{a:"A", why:"<em>Beth and Howard, I need you guys to finalize the image files by Thursday.</em> Jack and Cate check for typos."},
+
+    /* --- C Part 5 --- */
+    r1:{a:"writing", why:"<em>in writing</em> is a fixed phrase — a preposition needs a noun, and <em>writing</em> is the noun form here."},
+    r2:{a:"immediate", why:"The gap is before the noun <em>refund</em>, so it needs an adjective."},
+    r3:{a:"served", why:"<em>will be</em> + past participle makes the passive: the beverages do not serve, they are served."},
+    r4:{a:"responsible", why:"<em>be responsible for</em> — after the verb <em>be</em> you need an adjective, not an adverb or a noun."},
+    r5:{a:"constitute", why:"After the auxiliary <em>does not</em> you need the bare infinitive."},
+    r6:{a:"have been working", why:"<em>since</em> + a point in the past calls for the present perfect — the work started yesterday and is still going on."},
+    r7:{a:"do not know", why:"A first conditional: present simple in the <em>if</em> clause, imperative in the main clause."},
+    r8:{a:"exceptionally", why:"The gap modifies the adjective <em>popular</em>, so it needs an adverb."},
+    r9:{a:"collection", why:"After the preposition <em>for</em> you need a noun. <em>available for collection</em> is the set phrase."},
+    r10:{a:"has been moved", why:"The meeting did not move itself — someone moved it, so the passive is needed."},
+
+    /* --- C Part 6 --- */
+    r11:{a:"will be closed", why:"<em>from Monday 18 August</em> points to the future, and the car park is closed by someone — future passive."},
+    r12:{a:"is expected to take", why:"The closure has not happened yet, so a past tense is impossible. Only <em>is expected to take</em> looks forward."},
+    r13:{a:"which", why:"A relative pronoun for a thing (the lot), introducing extra information after a comma. <em>Where</em> would need no subject after it."},
+    r14:{a:"apologize", why:"A standing apology in a notice is present simple — compare <em>We apologize for any inconvenience</em> in Unit 4."},
+
+    /* --- C Part 7 --- */
+    r15:{a:"C", why:"Everything on the page — the class list, the prices, the ways to register — is there to get people to enrol.",
+      note:"A main idea question. Unit 7 says: do these third, after the specific information ones."},
+    r16:{a:"C", why:"$220 less the members’ 10% reduction = <span class='c'>$198</span>.",
+      note:"A specific information question, but it needs one small calculation — do not stop at $220."},
+    r17:{a:"B", why:"The advertisement lists the telephone, the main desk and the website. <em>E-mail</em> is never mentioned.",
+      note:"A NOT question — the most time-consuming type. Unit 7 says leave these till last."},
+    r18:{a:"B", why:"<em>Refunds for swimming classes will not be processed until all pool passes have been returned.</em>"},
+    r19:{a:"B", why:"<em>Would it be possible to move my registration to the same class in the spring term?</em> Withdrawing is only her second choice."},
+    r20:{a:"A", why:"<em>as your notice allows</em> = as your notice <em>permits</em>. <em>Admits</em>, <em>provides</em> and <em>accepts</em> do not fit this context."}
+  }
+});
+</script>
+</body>
+</html>
